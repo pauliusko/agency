@@ -68,7 +68,7 @@ const navLinks = [
   // Typing logo animation
   const logoText = document.getElementById('nav-logo-text');
   if (logoText) {
-    const word = 'AGENCY';
+    const word = 'GR\u00d8NK';
     let i = 0;
     function typeLogo() {
       if (i < word.length) {
@@ -102,20 +102,22 @@ const navLinks = [
   }
 
   .nav__logo {
-    font-family: 'Share Tech Mono', 'SF Mono', 'Fira Code', monospace;
-    font-size: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 22px;
     letter-spacing: 4px;
     color: var(--accent);
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
 
   .nav__logo-cursor {
     display: inline-block;
-    width: 2px;
-    height: 18px;
+    width: 8px;
+    height: 20px;
     background: var(--accent);
-    margin-left: 2px;
+    vertical-align: middle;
+    margin-left: 3px;
     animation: logoBlink 0.8s step-end infinite;
   }
 

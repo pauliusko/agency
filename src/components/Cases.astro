@@ -3,6 +3,7 @@ const cases = [
   {
     slug: 'barmenforyou',
     client: 'BarmenForYou',
+    niche: 'HoReCa',
     badge: 'WORDPRESS + ADS',
     metrics: [
       { value: '+85%', label: 'Užklausų' },
@@ -14,6 +15,7 @@ const cases = [
   {
     slug: 'skyjet-lt',
     client: 'SkyJet.lt',
+    niche: 'Kelionės',
     badge: 'META + GOOGLE ADS',
     metrics: [
       { value: '+120%', label: 'Srautas' },
@@ -25,6 +27,7 @@ const cases = [
   {
     slug: 'jetshowroom',
     client: 'JetShowroom',
+    niche: 'Automobiliai',
     badge: 'META + GOOGLE ADS',
     metrics: [
       { value: '+92%', label: 'Konversijų' },
@@ -36,6 +39,7 @@ const cases = [
   {
     slug: 'inner-lt',
     client: 'Inner.lt',
+    niche: 'Sveikata',
     badge: 'META ADS',
     metrics: [
       { value: '+67%', label: 'Reach' },
@@ -47,6 +51,7 @@ const cases = [
   {
     slug: 'oryzalab',
     client: 'OryzaLab',
+    niche: 'Kosmetika',
     badge: 'ADS + WEBSITE',
     metrics: [
       { value: '+145%', label: 'Srautas' },
@@ -58,6 +63,7 @@ const cases = [
   {
     slug: 'weardzen',
     client: 'WeardZen',
+    niche: 'Mada',
     badge: 'REDESIGN + ADS',
     metrics: [
       { value: '+110%', label: 'Konversijų' },
@@ -69,6 +75,7 @@ const cases = [
   {
     slug: 'london-antique',
     client: 'London Antique',
+    niche: 'Antikvaras',
     badge: 'CRM SISTEMA',
     metrics: [
       { value: '+200%', label: 'Efektyvumas' },
@@ -94,9 +101,12 @@ const cases = [
 
     <div class="cases__grid">
       {cases.map((c, idx) => (
-        <a href={`#case-${c.slug}`} class="case-card" data-animate data-animate-delay={String(Math.min(idx + 1, 4))}>
+        <a href={`/cases/${c.slug}`} class="case-card" data-animate data-animate-delay={String(Math.min(idx + 1, 4))}>
           <div class="case-card__header">
-            <span class="case-card__client">{c.client}</span>
+            <div class="case-card__header-left">
+              <span class="case-card__client">{c.client}</span>
+              <span class="case-card__niche">{c.niche}</span>
+            </div>
             <span class="case-card__arrow">→</span>
           </div>
           <span class="case-card__badge">{c.badge}</span>
@@ -205,10 +215,24 @@ const cases = [
     align-items: center;
   }
 
+  .case-card__header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
   .case-card__client {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
     letter-spacing: 1px;
+  }
+
+  .case-card__niche {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.6;
   }
 
   .case-card__arrow {
