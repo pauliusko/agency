@@ -94,7 +94,8 @@
 
     init();
     draw();
-    window.addEventListener('resize', resize);
+    const ro = new ResizeObserver(() => resize());
+    ro.observe(document.body);
   }
 
   // ── Counter Animation ──
@@ -173,7 +174,7 @@
   }
 
   .hero__line--outline {
-    -webkit-text-stroke: 1.5px rgba(240, 237, 228, 0.4);
+    -webkit-text-stroke: 1.5px rgba(240, 237, 228, 0.6);
     color: transparent;
   }
 

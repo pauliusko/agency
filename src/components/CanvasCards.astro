@@ -33,7 +33,8 @@
       ctx.scale(dpr, dpr);
     }
 
-    resize();
+    const ro = new ResizeObserver(() => resize());
+    ro.observe(wrap);
 
     const lines = [
       { text: 'const launch = async () => {', color: '#c8f73a', indent: 0 },
@@ -142,10 +143,7 @@
     }
 
     draw();
-    window.addEventListener('resize', () => {
-      ctx.resetTransform();
-      resize();
-    });
+    // Resize handling is now done by ResizeObserver
   }
 </script>
 
