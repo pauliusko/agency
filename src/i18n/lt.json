@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "services": "Paslaugos",
+    "cases": "Darbai",
+    "process": "Procesas",
+    "contact": "Kontaktai",
+    "cta": "Siųsti užklausą"
+  },
+  "hero": {
+    "label": "Digital Agency · Vilnius",
+    "line1": "WEB",
+    "line2": "BRAND",
+    "line3": "GROWTH.",
+    "tagline": "Kuriame svetaines, paleidžiame reklamą ir auginame verslą nuo pirmos dienos.",
+    "stats": {
+      "projects": "Projektų",
+      "roi": "ROI vid.",
+      "years": "Metų"
+    }
+  },
+  "services": {
+    "label": "Paslaugos",
+    "title": "PASLAUGOS\nIR KAINOS",
+    "desc": "Pasirinkite planą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.",
+    "cta": "Siųsti užklausą →"
+  },
+  "cases": {
+    "label": "Darbai",
+    "title": "MŪSŲ\nDARBAI",
+    "desc": "Rezultatai, kurie kalba patys už save.",
+    "readMore": "Skaityti daugiau →"
+  },
+  "process": {
+    "label": "Procesas",
+    "title": "KAIP MES\nDIRBAME"
+  },
+  "stack": {
+    "label": "Dirbame su"
+  },
+  "faq": {
+    "label": "DUK",
+    "title": "DAŽNIAUSIAI\nUŽDUODAMI\nKLAUSIMAI"
+  },
+  "contact": {
+    "label": "Kontaktai",
+    "title": "PRADĖKIME\nDIRBTI",
+    "desc": "Susisiekite ir aptarkime, kaip galime padėti auginti jūsų verslą.",
+    "name": "Vardas",
+    "company": "Įmonė",
+    "service": "Paslauga",
+    "message": "Žinutė",
+    "submit": "SIŲSTI UŽKLAUSĄ",
+    "success": "Ačiū! Susisieksime per 24 val."
+  },
+  "footer": {
+    "tagline": "Skaitmeninė rinkodaros agentūra"
+  },
+  "canvas": {
+    "card1": "Srautas",
+    "card2": "Užklausos",
+    "card3": "Augimas"
+  },
+  "cookie": {
+    "text": "Šioje svetainėje naudojami slapukai, kad užtikrintume geriausią patirtį.",
+    "accept": "Sutinku",
+    "decline": "Atmesti"
+  }
+}

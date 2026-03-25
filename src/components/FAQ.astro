@@ -1,0 +1,165 @@
+---
+const faqs = [
+  {
+    q: 'Kiek kainuoja svetainė ir per kiek laiko bus paruošta?',
+    a: 'Priklauso nuo apimties. Paprastas landing page — nuo 500€ per 5-7 dienas. Korporatyvinė svetainė — nuo 1500€ per 2-4 savaites. E-shop — individualiai.',
+  },
+  {
+    q: 'Ar galite dirbti su jau egzistuojančia svetaine?',
+    a: 'Taip. Atliekame svetainės auditą, randame silpnąsias vietas ir pasiūlome konkrečius patobulinimus — nuo SEO iki konversijų optimizavimo.',
+  },
+  {
+    q: 'Kokį reklamos biudžetą rekomenduojate?',
+    a: 'Priklausomai nuo nišos, rekomenduojame nuo 500€/mėn Google Ads ir nuo 300€/mėn Meta Ads. Pradedame su testiniu periodu ir optimizuojame pagal rezultatus.',
+  },
+  {
+    q: 'Kaip matuojate rezultatus?',
+    a: 'Kiekvienas projektas turi aiškius KPI: konversijas, ROI, CPL. Naudojame Google Analytics, Tag Manager ir kitas sistemas. Gaunate mėnesinius ataskaitas su konkrečiais skaičiais.',
+  },
+  {
+    q: 'Ar pasirašome sutartį?',
+    a: 'Taip, visada dirbame su sutartimi. Joje aiškiai nurodoma apimtis, terminai, kaina ir atsakomybės. Jokių paslėptų mokesčių.',
+  },
+  {
+    q: 'Ką daryti, jei noriu tiesiog pasikonsultuoti?',
+    a: 'Užsirezervuokite nemokamą 30 min. video skambutį arba parašykite mums. Aptarsime jūsų situaciją ir pateiksime rekomendacijas — be jokių įsipareigojimų.',
+  },
+];
+---
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq__header">
+      <div class="faq__header-left" data-animate>
+        <span class="faq__num">06 — <span data-i18n="faq.label">DUK</span></span>
+        <h2 class="faq__title" data-i18n="faq.title">DAŽNIAUSIAI<br/>UŽDUODAMI<br/>KLAUSIMAI</h2>
+      </div>
+    </div>
+
+    <div class="faq__list">
+      {faqs.map((item, idx) => (
+        <div class="faq__item" data-animate data-animate-delay={String(Math.min(idx + 1, 5))}>
+          <button class="faq__question" aria-expanded="false">
+            <span class="faq__q-text">{item.q}</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq__question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement!;
+      const wasOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq__item.open').forEach((el) => {
+        el.classList.remove('open');
+        el.querySelector('.faq__question')!.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle current
+      if (!wasOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+<style>
+  .faq {
+    padding: 120px 0;
+  }
+
+  .faq__header {
+    margin-bottom: 64px;
+  }
+
+  .faq__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .faq__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 96px);
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  .faq__list {
+    border-top: 0.5px solid var(--border);
+  }
+
+  .faq__item {
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 24px;
+  }
+
+  .faq__q-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.2s;
+  }
+
+  .faq__item:hover .faq__q-text,
+  .faq__item.open .faq__q-text {
+    color: var(--accent);
+  }
+
+  .faq__icon {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--text-muted);
+    transition: transform 0.3s, color 0.3s;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .faq__item.open .faq__icon {
+    transform: rotate(45deg);
+    color: var(--accent);
+  }
+
+  .faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  .faq__item.open .faq__answer {
+    max-height: 200px;
+    padding-bottom: 24px;
+  }
+
+  .faq__answer p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+</style>

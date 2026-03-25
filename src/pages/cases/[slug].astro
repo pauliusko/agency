@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={`${entry.data.title} — Agency`} description={entry.data.description || ''}>
+  <Nav />
+  <main class="case-page">
+    <article class="container">
+      <div class="case-page__header" data-animate>
+        <a href="/#cases" class="case-page__back">← Atgal</a>
+        <div class="case-page__meta">
+          {entry.data.client && <span class="case-page__client">{entry.data.client}</span>}
+          {entry.data.duration && <span class="case-page__badge">{entry.data.duration}</span>}
+        </div>
+        <h1 class="case-page__title">{entry.data.title}</h1>
+        {entry.data.description && <p class="case-page__desc">{entry.data.description}</p>}
+        {entry.data.metrics && (
+          <div class="case-page__metrics">
+            {entry.data.metrics.map((m) => (
+              <div class="case-page__metric">
+                <span class="case-page__metric-value">{m.value}</span>
+                <span class="case-page__metric-label">{m.label}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        {entry.data.services && (
+          <div class="case-page__services">
+            {entry.data.services.map((s) => (
+              <span class="case-page__service-tag">{s}</span>
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="case-page__content" data-animate data-animate-delay="2">
+        <Content />
+      </div>
+      <div class="case-page__cta" data-animate>
+        <h2>Norite panašių rezultatų?</h2>
+        <a href="#contact" class="case-page__cta-btn">Siųsti užklausą →</a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .case-page {
+    padding-top: 120px;
+    min-height: 80vh;
+  }
+
+  .case-page__header {
+    padding-bottom: 48px;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .case-page__back {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  .case-page__back:hover { color: var(--accent); }
+
+  .case-page__meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .case-page__client {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .case-page__badge {
+    background: var(--bg3);
+    padding: 4px 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .case-page__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 0.9;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .case-page__desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+
+  .case-page__metrics {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 24px;
+  }
+
+  .case-page__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .case-page__metric-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .case-page__metric-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+  }
+
+  .case-page__services {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .case-page__service-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 0.5px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .case-page__content {
+    padding-bottom: 64px;
+    line-height: 1.8;
+  }
+
+  .case-page__content :global(h2) {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+
+  .case-page__content :global(p) {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+
+  .case-page__content :global(ul) {
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  .case-page__content :global(li) {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    list-style: disc;
+  }
+
+  .case-page__content :global(strong) {
+    color: var(--text);
+  }
+
+  .case-page__content :global(blockquote) {
+    border-left: 2px solid var(--accent);
+    padding-left: 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  .case-page__cta {
+    padding: 64px 0;
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .case-page__cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .case-page__cta-btn {
+    background: var(--accent);
+    color: #0a0a0a;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 14px 28px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .case-page__cta-btn:hover { background: #d4ff3a; }
+
+  @media (max-width: 768px) {
+    .case-page__metrics {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .case-page__cta {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+  }
+</style>

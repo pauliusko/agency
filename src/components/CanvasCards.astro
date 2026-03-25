@@ -1,0 +1,214 @@
+---
+---
+
+<section class="canvas-cards">
+  <div class="container canvas-cards__inner">
+    <div class="canvas-cards__text" data-animate>
+      <span class="canvas-cards__label">Technologijos</span>
+      <h2 class="canvas-cards__title" data-i18n="canvas.title">KODAS,<br/>KURIS<br/>DIRBA.</h2>
+      <p class="canvas-cards__desc" data-i18n="canvas.desc">
+        Kiekvienas mūsų projektas gimsta iš švaraus kodo, greito dizaino ir duomenimis pagrįstų sprendimų. Nuo svetainės iki reklamos — viskas veikia kaip vieninga sistema.
+      </p>
+    </div>
+    <div class="canvas-cards__canvas-wrap" data-animate data-animate-delay="2">
+      <canvas id="code-canvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<script>
+  const canvas = document.getElementById('code-canvas') as HTMLCanvasElement;
+  if (canvas) {
+    const ctx = canvas.getContext('2d')!;
+    const wrap = canvas.parentElement!;
+    const dpr = window.devicePixelRatio || 1;
+    let w: number, h: number;
+
+    function resize() {
+      const rect = wrap.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    resize();
+
+    const lines = [
+      { text: 'const launch = async () => {', color: '#c8f73a', indent: 0 },
+      { text: '  const strategy = analyze(market);', color: '#8b8b8b', indent: 0 },
+      { text: '  const design = await create({', color: '#8b8b8b', indent: 0 },
+      { text: '    brand: client.vision,', color: '#6B8FF0', indent: 0 },
+      { text: '    ux: "premium",', color: '#6B8FF0', indent: 0 },
+      { text: '    mobile: true,', color: '#6B8FF0', indent: 0 },
+      { text: '  });', color: '#8b8b8b', indent: 0 },
+      { text: '  const site = build(design);', color: '#8b8b8b', indent: 0 },
+      { text: '  const ads = startCampaigns({', color: '#8b8b8b', indent: 0 },
+      { text: '    google: trackROI(),', color: '#FF8C42', indent: 0 },
+      { text: '    meta: targetAudience(),', color: '#FF8C42', indent: 0 },
+      { text: '    budget: optimize()', color: '#FF8C42', indent: 0 },
+      { text: '  });', color: '#8b8b8b', indent: 0 },
+      { text: '  return { site, ads, growth };', color: '#c8f73a', indent: 0 },
+      { text: '};', color: '#c8f73a', indent: 0 },
+      { text: '', color: '#8b8b8b', indent: 0 },
+      { text: 'launch(); // 🚀 rezultatai', color: '#00D9A6', indent: 0 },
+    ];
+
+    let t = 0;
+    const charSpeed = 0.35;
+
+    // Floating particles
+    const particles = Array.from({ length: 30 }, () => ({
+      x: Math.random() * 1,
+      y: Math.random() * 1,
+      vx: (Math.random() - 0.5) * 0.0005,
+      vy: (Math.random() - 0.5) * 0.0005,
+      size: 0.5 + Math.random() * 1.5,
+      alpha: 0.1 + Math.random() * 0.2,
+    }));
+
+    function draw() {
+      t += charSpeed;
+      ctx.clearRect(0, 0, w, h);
+
+      // Floating background particles
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > 1) p.vx *= -1;
+        if (p.y < 0 || p.y > 1) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x * w, p.y * h, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(200,247,58,${p.alpha})`;
+        ctx.fill();
+      });
+
+      // Code lines
+      const fontSize = Math.max(12, Math.min(14, w * 0.035));
+      const lineHeight = fontSize * 1.75;
+      const startX = 28;
+      const startY = 36;
+      let charCount = 0;
+
+      // Line numbers gutter
+      lines.forEach((line, i) => {
+        const y = startY + i * lineHeight;
+        if (y > h - 20) return;
+        ctx.font = `${fontSize}px "SF Mono", "Fira Code", "Consolas", monospace`;
+        ctx.textBaseline = 'top';
+
+        // Line number
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        ctx.textAlign = 'right';
+        ctx.fillText(String(i + 1), 18, y);
+        ctx.textAlign = 'left';
+
+        // Code text — typed effect
+        const visibleChars = Math.max(0, Math.floor(t) - charCount);
+        const displayText = line.text.substring(0, Math.min(visibleChars, line.text.length));
+        charCount += line.text.length;
+
+        if (displayText.length > 0) {
+          // Glow for keywords
+          if (line.color === '#c8f73a' || line.color === '#FF8C42' || line.color === '#00D9A6') {
+            ctx.save();
+            ctx.shadowBlur = 6;
+            ctx.shadowColor = line.color;
+            ctx.fillStyle = line.color;
+            ctx.fillText(displayText, startX, y);
+            ctx.restore();
+          } else {
+            ctx.fillStyle = line.color;
+            ctx.fillText(displayText, startX, y);
+          }
+
+          // Cursor blink at end of current line
+          if (visibleChars <= line.text.length && visibleChars > 0) {
+            const cursorX = startX + ctx.measureText(displayText).width;
+            if (Math.sin(Date.now() * 0.006) > 0) {
+              ctx.fillStyle = '#c8f73a';
+              ctx.fillRect(cursorX + 2, y, 2, fontSize);
+            }
+          }
+        }
+      });
+
+      // Loop the typing after all lines
+      const totalChars = lines.reduce((s, l) => s + l.text.length, 0);
+      if (Math.floor(t) > totalChars + 40) t = 0;
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+    window.addEventListener('resize', () => {
+      ctx.resetTransform();
+      resize();
+    });
+  }
+</script>
+
+<style>
+  .canvas-cards {
+    padding: 80px 0;
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .canvas-cards__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .canvas-cards__label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .canvas-cards__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 0.9;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .canvas-cards__desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 340px;
+  }
+
+  .canvas-cards__canvas-wrap {
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    border: 0.5px solid var(--border);
+  }
+
+  .canvas-cards__canvas-wrap canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .canvas-cards__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .canvas-cards__canvas-wrap {
+      aspect-ratio: 1 / 1;
+    }
+  }
+</style>

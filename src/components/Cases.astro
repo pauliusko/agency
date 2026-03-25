@@ -1,0 +1,231 @@
+---
+const cases = [
+  {
+    slug: 'barmenforyou',
+    client: 'BarmenForYou',
+    badge: 'WORDPRESS + ADS',
+    metrics: [
+      { value: '+85%', label: 'Užklausų' },
+      { value: '2.4x', label: 'ROI' },
+    ],
+    desc: 'WordPress svetainės kūrimas ir reklamos kampanijų paleidimas.',
+  },
+  {
+    slug: 'skyjet-lt',
+    client: 'SkyJet.lt',
+    badge: 'META + GOOGLE ADS',
+    metrics: [
+      { value: '+120%', label: 'Srautas' },
+      { value: '3.1x', label: 'ROAS' },
+    ],
+    desc: 'Kelionių paslaugų reklama per Meta ir Google Ads kanalus.',
+  },
+  {
+    slug: 'jetshowroom',
+    client: 'JetShowroom',
+    badge: 'META + GOOGLE ADS',
+    metrics: [
+      { value: '+92%', label: 'Konversijų' },
+      { value: '2.8x', label: 'ROAS' },
+    ],
+    desc: 'Premium automobilių šoūrumo skaitmeninės reklamos kampanijos.',
+  },
+  {
+    slug: 'inner-lt',
+    client: 'Inner.lt',
+    badge: 'META ADS',
+    metrics: [
+      { value: '+67%', label: 'Reach' },
+      { value: '2.2x', label: 'ROI' },
+    ],
+    desc: 'Meta Ads kampanijos su tikslia auditorija ir konversijų optimizavimu.',
+  },
+  {
+    slug: 'oryzalab',
+    client: 'OryzaLab',
+    badge: 'ADS + WEBSITE',
+    metrics: [
+      { value: '+145%', label: 'Srautas' },
+      { value: '3.5x', label: 'ROAS' },
+    ],
+    desc: 'Meta ir Google Ads kampanijos bei svetainės tobulinimas konversijoms.',
+  },
+  {
+    slug: 'weardzen',
+    client: 'WeardZen',
+    badge: 'REDESIGN + ADS',
+    metrics: [
+      { value: '+110%', label: 'Konversijų' },
+      { value: '2.9x', label: 'ROI' },
+    ],
+    desc: 'Svetainės redizainas ir reklamos kampanijų paleidimas nuo nulio.',
+  },
+  {
+    slug: 'london-antique',
+    client: 'London Antique',
+    badge: 'CRM SISTEMA',
+    metrics: [
+      { value: '+200%', label: 'Efektyvumas' },
+      { value: '40%', label: 'Laiko taupymas' },
+    ],
+    desc: 'Individualios CRM sistemos kūrimas verslo procesų automatizavimui.',
+  },
+];
+---
+
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="cases__header">
+      <div class="cases__header-left" data-animate>
+        <span class="cases__num">03 — <span data-i18n="cases.label">Darbai</span></span>
+        <h2 class="cases__title" data-i18n="cases.title">MŪSŲ<br/>DARBAI</h2>
+      </div>
+      <p class="cases__header-desc" data-animate data-animate-delay="1" data-i18n="cases.desc">
+        Klientai, su kuriais dirbome. Realūs rezultatai.
+      </p>
+    </div>
+
+    <div class="cases__grid">
+      {cases.map((c, idx) => (
+        <div class="case-card" data-animate data-animate-delay={String(Math.min(idx + 1, 4))}>
+          <div class="case-card__top">
+            <span class="case-card__client">{c.client}</span>
+            <span class="case-card__badge">{c.badge}</span>
+          </div>
+          <div class="case-card__metrics">
+            {c.metrics.map((m) => (
+              <div class="case-card__metric">
+                <span class="case-card__metric-value">{m.value}</span>
+                <span class="case-card__metric-label">{m.label}</span>
+              </div>
+            ))}
+          </div>
+          <p class="case-card__desc">{c.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cases {
+    padding: 120px 0;
+    background: var(--bg);
+  }
+
+  .cases__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+
+  .cases__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .cases__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 96px);
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  .cases__header-desc {
+    max-width: 240px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-top: 24px;
+  }
+
+  .cases__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .case-card {
+    background: var(--bg2);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .case-card:hover {
+    border-left-color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .case-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .case-card__client {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .case-card__badge {
+    background: var(--bg3);
+    padding: 4px 10px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .case-card__metrics {
+    display: flex;
+    gap: 28px;
+  }
+
+  .case-card__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .case-card__metric-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .case-card__metric-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+  }
+
+  .case-card__desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .cases__header {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cases__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

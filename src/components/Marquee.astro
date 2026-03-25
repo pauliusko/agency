@@ -1,0 +1,45 @@
+---
+---
+
+<div class="marquee">
+  <div class="marquee__track">
+    <span class="marquee__text">WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP ·&nbsp;</span>
+    <span class="marquee__text" aria-hidden="true">WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP ·&nbsp;</span>
+  </div>
+</div>
+
+<style>
+  .marquee {
+    background: var(--accent);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+
+  .marquee:hover .marquee__track {
+    animation-play-state: paused;
+  }
+
+  .marquee__track {
+    display: flex;
+    width: max-content;
+    animation: marquee 18s linear infinite;
+  }
+
+  .marquee__text {
+    flex-shrink: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #0a0a0a;
+    white-space: nowrap;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+  }
+</style>

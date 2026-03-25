@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "services": "Services",
+    "cases": "Work",
+    "process": "Process",
+    "contact": "Contact",
+    "cta": "Get in Touch"
+  },
+  "hero": {
+    "label": "Digital Agency · Vilnius",
+    "line1": "WEB",
+    "line2": "BRAND",
+    "line3": "GROWTH.",
+    "tagline": "We build websites, launch ads, and grow businesses from day one.",
+    "stats": {
+      "projects": "Projects",
+      "roi": "ROI avg.",
+      "years": "Years"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "SERVICES\n& PRICING",
+    "desc": "Choose a plan and start growing your digital presence today.",
+    "cta": "Get in Touch →"
+  },
+  "cases": {
+    "label": "Work",
+    "title": "OUR\nWORK",
+    "desc": "Results that speak for themselves.",
+    "readMore": "Read Case Study →"
+  },
+  "process": {
+    "label": "Process",
+    "title": "HOW WE\nWORK"
+  },
+  "stack": {
+    "label": "We work with"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "FREQUENTLY\nASKED\nQUESTIONS"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "LET'S\nWORK",
+    "desc": "Get in touch and let's discuss how we can help grow your business.",
+    "name": "Name",
+    "company": "Company",
+    "service": "Service",
+    "message": "Message",
+    "submit": "SEND INQUIRY",
+    "success": "Thank you! We'll get back to you within 24h."
+  },
+  "footer": {
+    "tagline": "Digital marketing agency"
+  },
+  "canvas": {
+    "card1": "Traffic",
+    "card2": "Leads",
+    "card3": "Growth"
+  },
+  "cookie": {
+    "text": "This website uses cookies to ensure the best experience.",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}

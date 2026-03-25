@@ -1,0 +1,151 @@
+---
+const steps = [
+  { num: '01', title: 'Analizė', desc: 'Gilinamės į jūsų verslą, rinką ir konkurentus.', active: true },
+  { num: '02', title: 'Strategija', desc: 'Sukuriame duomenimis pagrįstą veiksmų planą.' },
+  { num: '03', title: 'Dizainas', desc: 'Projektuojame vizualinę tapatybę ir vartotojo sąsają.' },
+  { num: '04', title: 'Kūrimas', desc: 'Realizuojame sprendimą naudodami moderniausias technologijas.' },
+  { num: '05', title: 'Paleidimas', desc: 'Startuojame, testuojame ir optimizuojame veikimą.' },
+  { num: '06', title: 'Optimizavimas', desc: 'Nuolatinė optimizacija ir plėtra pagal duomenis.' },
+];
+---
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="process__header">
+      <div class="process__header-left" data-animate>
+        <span class="process__num">04 — <span data-i18n="process.label">Procesas</span></span>
+        <h2 class="process__title" data-i18n="process.title">KAIP MES<br/>DIRBAME</h2>
+      </div>
+    </div>
+
+    <div class="process__steps">
+      {steps.map((step, idx) => (
+        <div class={`process__step ${step.active ? 'process__step--active' : ''}`} data-animate data-animate-delay={String(idx + 1)}>
+          <span class="process__step-num">{step.num}</span>
+          <h3 class="process__step-title">{step.title}</h3>
+          <p class="process__step-desc">{step.desc}</p>
+        </div>
+      ))}
+      <div class="process__line" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process {
+    padding: 120px 0;
+  }
+
+  .process__header {
+    margin-bottom: 64px;
+  }
+
+  .process__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .process__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 96px);
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  .process__steps {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .process__line {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    height: 0.5px;
+    background: var(--border);
+  }
+
+  .process__step {
+    flex: 1;
+    position: relative;
+    padding-right: 16px;
+    cursor: default;
+  }
+
+  .process__step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: var(--border);
+    line-height: 1;
+    display: block;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+  }
+
+  .process__step--active .process__step-num {
+    color: var(--accent);
+  }
+
+  .process__step:hover .process__step-num {
+    color: var(--accent);
+  }
+
+  .process__step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+
+  .process__step:hover .process__step-title {
+    color: var(--accent);
+  }
+
+  .process__step-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 180px;
+    transition: color 0.3s;
+  }
+
+  .process__step:hover .process__step-desc {
+    color: var(--text);
+  }
+
+  @media (max-width: 768px) {
+    .process__steps {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .process__line {
+      top: 0;
+      bottom: 0;
+      left: 30px;
+      right: auto;
+      width: 0.5px;
+      height: auto;
+    }
+
+    .process__step {
+      padding-left: 72px;
+      padding-right: 0;
+    }
+
+    .process__step-num {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 40px;
+    }
+  }
+</style>

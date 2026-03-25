@@ -1,0 +1,273 @@
+---
+const cards = [
+  {
+    num: '01',
+    duration: '1 MĖN',
+    title: 'STARTAS',
+    desc: 'Greitas startas internete — svetainė, reklama ir pirmieji klientai.',
+    bullets: ['Svetainė (landing arba korporatyvinė)', 'Google Ads kampanija', 'Bazinis SEO ir analitika', 'Vizualai ir baneriai'],
+    price: '2450€',
+  },
+  {
+    num: '02',
+    duration: '3 MĖN',
+    title: 'AUGIMAS',
+    desc: 'Stabilus klientų srautas per kelis kanalus vienu metu.',
+    bullets: ['Korporatyvinė svetainė su UX', 'SEO optimizacija + turinys', 'Google Ads + remarketing', 'Meta Ads (Facebook & Instagram)', 'Vizualai, baneriai, video'],
+    price: '5500€',
+  },
+  {
+    num: '03',
+    duration: '6 MĖN',
+    title: 'DOMINACIJA',
+    desc: 'Pilna skaitmeninė strategija — nuo branding iki pardavimų.',
+    bullets: ['Išplėsta svetainė su UX/UI dizainu', 'SEO nuo A iki Ž', 'Google Ads pilnas ciklas', 'Meta Ads kelios kampanijos', 'Logotipas ir prekės ženklas', 'Mėnesinis reporting'],
+    price: '9500€',
+  },
+  {
+    num: '04',
+    duration: '2–4 MĖN',
+    title: 'E-SHOP',
+    desc: 'Shopify arba WooCommerce e-commerce su pilnu palaikymu.',
+    bullets: ['E-shop ant Shopify arba WooCommerce', 'Produktų migracija ir katalogas', 'Mokėjimo ir pristatymo integracija', 'Google Shopping kampanijos', 'SEO produktų puslapiams', 'Konversijų sekimas ir analitika'],
+    price: 'nuo 1500€',
+  },
+];
+---
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services__header">
+      <div class="services__header-left" data-animate>
+        <span class="services__num">02 — <span data-i18n="services.label">Paslaugos</span></span>
+        <h2 class="services__title" data-i18n="services.title">PASLAUGOS<br/>IR KAINOS</h2>
+      </div>
+      <p class="services__header-desc" data-animate data-animate-delay="1" data-i18n="services.desc">
+        Pasirinkite planą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      {cards.map((card, idx) => (
+        <div class="service-card" data-animate data-animate-delay={String(idx + 1)}>
+          <div class="service-card__top">
+            <span class="service-card__num">{card.num}</span>
+            <span class="service-card__badge">{card.duration}</span>
+          </div>
+          <h3 class="service-card__title">{card.title}</h3>
+          <p class="service-card__desc">{card.desc}</p>
+          <ul class="service-card__bullets">
+            {card.bullets.map((b) => (
+              <li>↘ {b}</li>
+            ))}
+          </ul>
+          <div class="service-card__bottom">
+            <div class="service-card__price-wrap">
+              <span class="service-card__price">{card.price}</span>
+              <span class="service-card__price-note">kaina už visą laikotarpį</span>
+            </div>
+            <a href="#contact" class="service-card__cta" data-i18n="services.cta">SIŲSTI UŽKLAUSĄ →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.service-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    });
+  });
+</script>
+
+<style>
+  .services {
+    padding: 120px 0;
+  }
+
+  .services__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+
+  .services__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .services__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 96px);
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  .services__header-desc {
+    max-width: 240px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-top: 24px;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .service-card {
+    background: var(--bg2);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(200, 247, 58, 0.05),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .service-card:hover {
+    border-bottom-color: var(--accent);
+    background: #141414;
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .service-card__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+  }
+
+  .service-card__badge {
+    background: var(--bg3);
+    padding: 4px 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .service-card__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 24px;
+  }
+
+  .service-card__desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .service-card__bullets {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__bullets li {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text-muted);
+  }
+
+  .service-card__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 32px;
+  }
+
+  .service-card__price-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .service-card__price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .service-card__price-note {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .service-card__cta {
+    display: block;
+    text-align: center;
+    padding: 14px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .service-card__cta:hover {
+    background: var(--accent);
+    color: #0a0a0a;
+  }
+
+  @media (max-width: 1100px) {
+    .services__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .services__header {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .services__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

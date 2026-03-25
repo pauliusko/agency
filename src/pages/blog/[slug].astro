@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={`${entry.data.title} — Agency Blog`} description={entry.data.excerpt || ''}>
+  <Nav />
+  <main class="blog-post">
+    <article class="container">
+      <div class="blog-post__header" data-animate>
+        <a href="/" class="blog-post__back">← Blog</a>
+        <div class="blog-post__meta">
+          <time datetime={entry.data.date}>{new Date(entry.data.date).toLocaleDateString('lt-LT')}</time>
+          {entry.data.author && <span>· {entry.data.author}</span>}
+        </div>
+        <h1 class="blog-post__title">{entry.data.title}</h1>
+        {entry.data.excerpt && <p class="blog-post__excerpt">{entry.data.excerpt}</p>}
+        {entry.data.tags && (
+          <div class="blog-post__tags">
+            {entry.data.tags.map((tag) => (
+              <span class="blog-post__tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="blog-post__content" data-animate data-animate-delay="2">
+        <Content />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .blog-post {
+    padding-top: 120px;
+    min-height: 80vh;
+  }
+
+  .blog-post__header {
+    padding-bottom: 48px;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .blog-post__back {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  .blog-post__back:hover { color: var(--accent); }
+
+  .blog-post__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .blog-post__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 0.9;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .blog-post__excerpt {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 16px;
+  }
+
+  .blog-post__tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .blog-post__tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 0.5px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .blog-post__content {
+    padding-bottom: 64px;
+    line-height: 1.8;
+  }
+
+  .blog-post__content :global(h2) {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+
+  .blog-post__content :global(p) {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+
+  .blog-post__content :global(ul), .blog-post__content :global(ol) {
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  .blog-post__content :global(li) {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    list-style: disc;
+  }
+
+  .blog-post__content :global(strong) {
+    color: var(--text);
+  }
+
+  .blog-post__content :global(blockquote) {
+    border-left: 2px solid var(--accent);
+    padding-left: 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+</style>
