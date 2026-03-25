@@ -18,6 +18,7 @@ const navLinks = [
     </ul>
 
     <div class="nav__right">
+      <a href="tel:+37060000000" class="nav__phone">+370 600 00000</a>
       <div class="nav__lang">
         <button class="nav__lang-btn active" data-lang-btn="lt">LT</button>
         <button class="nav__lang-btn" data-lang-btn="en">EN</button>
@@ -109,6 +110,7 @@ const navLinks = [
     display: flex;
     align-items: center;
     text-decoration: none;
+    min-width: 130px;
   }
 
   .nav__logo-cursor {
@@ -145,6 +147,19 @@ const navLinks = [
     display: flex;
     align-items: center;
     gap: 16px;
+  }
+
+  .nav__phone {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav__phone:hover {
+    color: var(--accent);
   }
 
   .nav__lang {
@@ -241,5 +256,6 @@ const navLinks = [
   @media (max-width: 768px) {
     .nav__links, .nav__right { display: none; }
     .nav__burger { display: flex; }
+    .nav__phone { display: none; }
   }
 </style>

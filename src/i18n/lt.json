@@ -15,13 +15,13 @@
     "stats": {
       "projects": "Projektų",
       "roi": "ROI vid.",
-      "years": "Metų"
+      "years": "Agentūra dirba"
     }
   },
   "services": {
     "label": "Paslaugos",
     "title": "PASLAUGOS\nIR KAINOS",
-    "desc": "Pasirinkite programą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.",
+    "desc": "Pasirinkite planą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.",
     "cta": "Siųsti užklausą →"
   },
   "cases": {
