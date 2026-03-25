@@ -22,33 +22,24 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.062 3.345-.479.329-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.178.12.13.153.304.169.432.015.128.035.42-.001.648z"/></svg>
           <span>Telegram</span>
         </a>
+        <a href="https://wa.me/37060000000" target="_blank" rel="noopener" class="contact__channel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
       </div>
 
-      <!-- Video Call Booking -->
+      <!-- Google Calendar Booking Embed -->
       <div class="contact__booking">
         <h4 class="contact__booking-title" data-i18n="contact.booking">Arba užsirezervuokite video skambutį:</h4>
-        <div class="contact__booking-fields">
-          <div class="contact__booking-field">
-            <label for="call-date">Data</label>
-            <input type="date" id="call-date" name="call-date" min="" />
-          </div>
-          <div class="contact__booking-field">
-            <label for="call-time">Laikas</label>
-            <select id="call-time" name="call-time">
-              <option value="10:00">10:00</option>
-              <option value="11:00">11:00</option>
-              <option value="12:00">12:00</option>
-              <option value="13:00">13:00</option>
-              <option value="14:00">14:00</option>
-              <option value="15:00">15:00</option>
-              <option value="16:00">16:00</option>
-              <option value="17:00">17:00</option>
-            </select>
-          </div>
-          <button class="contact__booking-btn" id="book-call-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.1 4.76a3.38 3.38 0 0 1 4.14 4.14m-1.72-6.56A7.69 7.69 0 0 1 22 12m-2.6-2.6A3.38 3.38 0 0 0 15.1 4.76M2 2l20 20M11 6a5 5 0 0 0-3.53 8.53L2 22h5l-1-4 3.53-3.53A5 5 0 0 0 11 6z"/></svg>
-            Google Meet
-          </button>
+        <div class="contact__booking-embed">
+          <iframe
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0?gv=true"
+            style="border: 0"
+            width="100%"
+            height="400"
+            frameborder="0"
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -70,17 +61,17 @@
         <input type="tel" name="phone" placeholder=" " id="field-phone" />
         <label for="field-phone">Telefonas</label>
       </div>
-      <div class="contact__field">
+      <div class="contact__field contact__field--select">
         <select name="service" required id="field-service">
-          <option value="" disabled selected>—</option>
-          <option value="Startas">Startas</option>
-          <option value="Augimas">Augimas</option>
-          <option value="Dominacija">Dominacija</option>
-          <option value="E-Shop">E-Shop</option>
+          <option value="" disabled selected>Pasirinkite paslaugą</option>
           <option value="Konsultacija">Konsultacija</option>
+          <option value="Reklama">Reklamos valdymas</option>
+          <option value="Svetainės kūrimas">Svetainės kūrimas</option>
+          <option value="AI sprendimai">AI sprendimai</option>
+          <option value="E-parduotuvė">E-parduotuvė</option>
           <option value="Kita">Kita</option>
         </select>
-        <label for="field-service" data-i18n="contact.service">Paslauga</label>
+        <label for="field-service" class="contact__label--select" data-i18n="contact.service">Paslauga</label>
       </div>
       <div class="contact__field contact__field--full">
         <textarea name="message" rows={4} placeholder=" " required id="field-message"></textarea>
@@ -96,27 +87,6 @@
 </section>
 
 <script>
-  // Set min date to today
-  const dateInput = document.getElementById('call-date') as HTMLInputElement;
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.min = today;
-    dateInput.value = today;
-  }
-
-  // Book call
-  document.getElementById('book-call-btn')?.addEventListener('click', () => {
-    const date = (document.getElementById('call-date') as HTMLInputElement)?.value;
-    const time = (document.getElementById('call-time') as HTMLSelectElement)?.value;
-    if (date && time) {
-      const start = new Date(`${date}T${time}:00`);
-      const end = new Date(start.getTime() + 30 * 60000);
-      const fmt = (d: Date) => d.toISOString().replace(/-|:|\.\d{3}/g, '');
-      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Video+skambutis+su+Agency&dates=${fmt(start)}/${fmt(end)}&details=Nemokama+30+min+konsultacija&add=info@agency.lt`;
-      window.open(url, '_blank');
-    }
-  });
-
   // Form
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('contact-success')!;
@@ -195,7 +165,7 @@
     color: var(--accent);
   }
 
-  /* ── Booking ── */
+  /* ── Booking Embed ── */
   .contact__booking {
     border-top: 1px solid var(--border);
     padding-top: 24px;
@@ -210,56 +180,17 @@
     font-weight: 400;
   }
 
-  .contact__booking-fields {
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-  }
-
-  .contact__booking-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .contact__booking-field label {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-  }
-
-  .contact__booking-field input,
-  .contact__booking-field select {
-    background: var(--bg3);
+  .contact__booking-embed {
+    border-radius: 8px;
+    overflow: hidden;
     border: 1px solid var(--border);
-    color: var(--text);
-    padding: 10px 12px;
-    font-size: 13px;
-    border-radius: 4px;
-    min-width: 110px;
+    background: #111;
   }
 
-  .contact__booking-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 10px 16px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-
-  .contact__booking-btn:hover {
-    background: var(--accent);
-    color: #0a0a0a;
+  .contact__booking-embed iframe {
+    display: block;
+    width: 100%;
+    min-height: 400px;
   }
 
   /* ── Form ── */
@@ -326,6 +257,25 @@
     background-position: right 0 center;
     padding-right: 20px;
     cursor: pointer;
+  }
+
+  .contact__field--select {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .contact__label--select {
+    position: static !important;
+    font-size: 9px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted) !important;
+    pointer-events: none;
+  }
+
+  .contact__field--select select {
+    border-bottom: 1px solid var(--border);
   }
 
   .contact__field textarea {
