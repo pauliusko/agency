@@ -2,35 +2,57 @@
 const cards = [
   {
     num: '01',
-    duration: '1 MĖN',
+    duration: '1 MĖN PROGRAMA',
     title: 'STARTAS',
-    desc: 'Greitas startas internete — svetainė, reklama ir pirmieji klientai.',
-    bullets: ['Svetainė (landing arba korporatyvinė)', 'Google Ads kampanija', 'Bazinis SEO ir analitika', 'Vizualai ir baneriai'],
-    price: '2450€',
+    desc: 'Greitas startas internete — svetainė, reklama ir pirmieji klientai per mėnesį.',
+    bullets: ['Landing page arba vizitinė svetainė', 'Google Ads kampanijos paleidimas', 'Bazinis SEO auditas ir optimizacija', 'Socialinių tinklų profilio sutvarkymas', 'Konversijų sekimo konfigūracija'],
+    price: '1490€',
+    priceNote: 'kaina už visą programą',
   },
   {
     num: '02',
-    duration: '3 MĖN',
+    duration: '3 MĖN PROGRAMA',
     title: 'AUGIMAS',
-    desc: 'Stabilus klientų srautas per kelis kanalus vienu metu.',
-    bullets: ['Korporatyvinė svetainė su UX', 'SEO optimizacija + turinys', 'Google Ads + remarketing', 'Meta Ads (Facebook & Instagram)', 'Vizualai, baneriai, video'],
-    price: '5500€',
+    desc: 'Stabilus klientų srautas per kelis kanalus su nuolatine optimizacija.',
+    bullets: ['Korporatyvinė svetainė su UX dizainu', 'SEO strategija + turinio planas', 'Google Ads + remarketing kampanijos', 'Meta Ads (Facebook & Instagram)', 'Mėnesinis veiklos reporting', 'A/B testavimas ir optimizacija'],
+    price: '3900€',
+    priceNote: 'kaina už visą programą',
   },
   {
     num: '03',
-    duration: '6 MĖN',
+    duration: '6 MĖN PROGRAMA',
     title: 'DOMINACIJA',
-    desc: 'Pilna skaitmeninė strategija — nuo branding iki pardavimų.',
-    bullets: ['Išplėsta svetainė su UX/UI dizainu', 'SEO nuo A iki Ž', 'Google Ads pilnas ciklas', 'Meta Ads kelios kampanijos', 'Logotipas ir prekės ženklas', 'Mėnesinis reporting'],
-    price: '9500€',
+    desc: 'Pilna skaitmeninė strategija — nuo branding iki pardavimų automatizacijos.',
+    bullets: ['Išplėsta svetainė su UX/UI dizainu', 'Pilnas SEO ciklas (on-page + off-page)', 'Google Ads pilnas kampanijų valdymas', 'Meta Ads kelios kampanijos + retargeting', 'Logotipas ir vizualinis identitetas', 'CRM integracija ir lead nurturing', 'Savaitinis reporting ir strategijos koregavimas'],
+    price: '6900€',
+    priceNote: 'kaina už visą programą',
   },
   {
     num: '04',
-    duration: '2–4 MĖN',
+    duration: '2–4 MĖN PROGRAMA',
     title: 'E-SHOP',
-    desc: 'Shopify arba WooCommerce e-commerce su pilnu palaikymu.',
-    bullets: ['E-shop ant Shopify arba WooCommerce', 'Produktų migracija ir katalogas', 'Mokėjimo ir pristatymo integracija', 'Google Shopping kampanijos', 'SEO produktų puslapiams', 'Konversijų sekimas ir analitika'],
-    price: 'nuo 1500€',
+    desc: 'Shopify arba WooCommerce e-commerce su pilnu palaikymu ir reklama.',
+    bullets: ['E-shop ant Shopify arba WooCommerce', 'Produktų katalogas ir kategorijos', 'Mokėjimo ir pristatymo integracija', 'Google Shopping + Meta katalogo kampanijos', 'SEO produktų puslapiams', 'Konversijų sekimas ir analitika'],
+    price: 'nuo 2900€',
+    priceNote: 'kaina pagal apimtį',
+  },
+];
+
+const supportPlans = [
+  {
+    title: 'PRIEŽIŪRA',
+    desc: 'Nuolatinis svetainės palaikymas, atnaujinimai ir saugumo stebėjimas.',
+    price: 'nuo 149€/mėn',
+  },
+  {
+    title: 'KONSULTACIJA',
+    desc: 'Individualus strategijos aptarimas ir rekomendacijos jūsų verslui.',
+    price: 'nuo 89€/val',
+  },
+  {
+    title: 'VALANDINIS DARBAS',
+    desc: 'Dizainas, programavimas ar reklamos optimizacija pagal poreikį.',
+    price: 'nuo 59€/val',
   },
 ];
 ---
@@ -43,7 +65,7 @@ const cards = [
         <h2 class="services__title" data-i18n="services.title">PASLAUGOS<br/>IR KAINOS</h2>
       </div>
       <p class="services__header-desc" data-animate data-animate-delay="1" data-i18n="services.desc">
-        Pasirinkite planą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.
+        Pasirinkite programą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.
       </p>
     </div>
 
@@ -64,12 +86,25 @@ const cards = [
           <div class="service-card__bottom">
             <div class="service-card__price-wrap">
               <span class="service-card__price">{card.price}</span>
-              <span class="service-card__price-note">kaina už visą laikotarpį</span>
+              <span class="service-card__price-note">{card.priceNote}</span>
             </div>
             <a href="#contact" class="service-card__cta" data-i18n="services.cta">SIŲSTI UŽKLAUSĄ →</a>
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="services__support" data-animate>
+      <h3 class="services__support-title">PALAIKYMAS IR PAPILDOMOS PASLAUGOS</h3>
+      <div class="services__support-grid">
+        {supportPlans.map((plan) => (
+          <div class="support-card">
+            <h4 class="support-card__title">{plan.title}</h4>
+            <p class="support-card__desc">{plan.desc}</p>
+            <span class="support-card__price">{plan.price}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>
@@ -113,8 +148,8 @@ const cards = [
   }
 
   .services__header-desc {
-    max-width: 240px;
-    font-size: 13px;
+    max-width: 320px;
+    font-size: 15px;
     color: var(--text-muted);
     line-height: 1.7;
     padding-top: 24px;
@@ -269,5 +304,67 @@ const cards = [
     .services__grid {
       grid-template-columns: 1fr;
     }
+
+    .services__support-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Support / Maintenance section */
+  .services__support {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .services__support-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .services__support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .support-card {
+    background: var(--bg2);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 2px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .support-card:hover {
+    border-top-color: var(--accent);
+    background: #141414;
+  }
+
+  .support-card__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  .support-card__desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .support-card__price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--accent);
+    line-height: 1;
+    margin-top: 8px;
   }
 </style>

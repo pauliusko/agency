@@ -9,7 +9,7 @@ const navLinks = [
 
 <nav class="nav">
   <div class="container nav__inner">
-    <a href="/" class="nav__logo">AGENCY</a>
+    <a href="/" class="nav__logo"><span class="nav__logo-text" id="nav-logo-text"></span><span class="nav__logo-cursor"></span></a>
 
     <ul class="nav__links">
       {navLinks.map((l) => (
@@ -49,6 +49,7 @@ const navLinks = [
 </div>
 
 <script>
+  // Burger menu
   const burger = document.getElementById('nav-burger')!;
   const overlay = document.getElementById('nav-overlay')!;
   burger.addEventListener('click', () => {
@@ -63,6 +64,21 @@ const navLinks = [
       document.body.style.overflow = '';
     })
   );
+
+  // Typing logo animation
+  const logoText = document.getElementById('nav-logo-text');
+  if (logoText) {
+    const word = 'AGENCY';
+    let i = 0;
+    function typeLogo() {
+      if (i < word.length) {
+        logoText.textContent += word[i];
+        i++;
+        setTimeout(typeLogo, 100 + Math.random() * 80);
+      }
+    }
+    setTimeout(typeLogo, 300);
+  }
 </script>
 
 <style>
@@ -86,10 +102,26 @@ const navLinks = [
   }
 
   .nav__logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
+    font-family: 'Share Tech Mono', 'SF Mono', 'Fira Code', monospace;
+    font-size: 20px;
     letter-spacing: 4px;
-    color: var(--text);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__logo-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background: var(--accent);
+    margin-left: 2px;
+    animation: logoBlink 0.8s step-end infinite;
+  }
+
+  @keyframes logoBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 
   .nav__links {

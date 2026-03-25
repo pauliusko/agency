@@ -21,13 +21,13 @@
   "services": {
     "label": "Paslaugos",
     "title": "PASLAUGOS\nIR KAINOS",
-    "desc": "Pasirinkite planą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.",
+    "desc": "Pasirinkite programą ir pradėkite augti skaitmeninėje erdvėje jau šiandien.",
     "cta": "Siųsti užklausą →"
   },
   "cases": {
     "label": "Darbai",
     "title": "MŪSŲ\nDARBAI",
-    "desc": "Rezultatai, kurie kalba patys už save.",
+    "desc": "Klientai, su kuriais dirbome. Realūs rezultatai, kurie kalba patys už save.",
     "readMore": "Skaityti daugiau →"
   },
   "process": {

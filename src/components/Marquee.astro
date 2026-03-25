@@ -1,10 +1,11 @@
 ---
+const items = 'META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · ';
 ---
 
 <div class="marquee">
   <div class="marquee__track">
-    <span class="marquee__text">WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP ·&nbsp;</span>
-    <span class="marquee__text" aria-hidden="true">WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · META ADS · BRANDING · E-SHOP ·&nbsp;</span>
+    <span class="marquee__text">{items}{items}</span>
+    <span class="marquee__text" aria-hidden="true">{items}{items}</span>
   </div>
 </div>
 
@@ -21,10 +22,11 @@
 
   .marquee__track {
     display: flex;
+    gap: 0;
     width: max-content;
-    animation: marquee 18s linear infinite;
+    animation: marquee 20s linear infinite;
     will-change: transform;
-    -webkit-transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   .marquee__text {
@@ -34,6 +36,7 @@
     letter-spacing: 4px;
     color: #0a0a0a;
     white-space: nowrap;
+    padding-right: 0;
   }
 
   @keyframes marquee {
