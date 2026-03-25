@@ -3,65 +3,338 @@
     "services": "Services",
     "cases": "Work",
     "process": "Process",
+    "testimonials": "Reviews",
     "contact": "Contact",
     "cta": "Get in Touch"
   },
+  "marquee": {
+    "text": "META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · AI · "
+  },
   "hero": {
-    "label": "Digital Agency · Vilnius",
+    "label": "Digital agency · we work worldwide",
     "line1": "WEB",
     "line2": "BRAND",
     "line3": "GROWTH.",
     "tagline": "We build websites, launch ads, and grow businesses from day one.",
+    "cta": "LET'S WORK →",
     "stats": {
       "projects": "Projects",
-      "roi": "ROI avg.",
+      "roi": "Avg. ROI",
       "years": "Years of experience"
     }
   },
   "services": {
     "label": "Services",
     "title": "SERVICES\n& PRICING",
-    "desc": "Choose a program and start growing your digital presence today.",
-    "cta": "GET IN TOUCH →"
+    "desc": "Bundles, standalone web builds, paid media, and AI — in one place.",
+    "cta": "GET IN TOUCH →",
+    "tab": {
+      "bundles": "BUNDLES",
+      "website": "WEBSITES",
+      "ads": "ADS",
+      "ai": "AI"
+    },
+    "supportTitle": "MAINTENANCE & ADD‑ONS",
+    "cardData": {
+      "bundles": [
+        {
+          "num": "01",
+          "duration": "1‑MONTH PROGRAM",
+          "title": "DIGITAL START",
+          "desc": "Fast launch online — site, ads, and first leads within a month.",
+          "bullets": ["Landing or brochure site", "Google Ads launch", "Baseline SEO audit + fixes", "Social profile cleanup", "Conversion tracking setup"],
+          "price": "€1490",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "02",
+          "duration": "3‑MONTH PROGRAM",
+          "title": "BUSINESS GROWTH",
+          "desc": "Stable acquisition across channels with ongoing optimization.",
+          "bullets": ["Corporate site with UX design", "SEO strategy + content plan", "Google Ads + remarketing", "Meta Ads (Facebook & Instagram)", "Monthly performance reporting", "A/B testing and tuning"],
+          "price": "€3900",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "03",
+          "duration": "6‑MONTH PROGRAM",
+          "title": "FULL MANAGEMENT",
+          "desc": "Full digital strategy — from branding to sales automation.",
+          "bullets": ["Larger site with UX/UI", "Full SEO cycle (on/off‑page)", "Google Ads full management", "Multi Meta campaigns + retargeting", "Logo + visual identity", "CRM integration + lead nurturing", "Weekly reporting + strategy updates"],
+          "price": "€6900",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "04",
+          "duration": "CUSTOM PROGRAM",
+          "title": "E‑COMMERCE",
+          "desc": "Shopify or WooCommerce store with ongoing support.",
+          "bullets": ["Store on Shopify or WooCommerce", "Catalog + categories", "Payments + shipping integrations", "Google Shopping + Meta catalog ads", "Product SEO", "Tracking + analytics"],
+          "price": "from €1000",
+          "priceNote": "/ project"
+        }
+      ],
+      "website": [
+        {
+          "num": "W1",
+          "duration": "5–7 DAYS",
+          "title": "LANDING PAGE",
+          "desc": "Single‑page site for fast launch and conversions.",
+          "bullets": ["Structure, copy, and visual frame", "Mobile‑first and performance", "Forms and conversion points", "Baseline SEO and analytics"],
+          "price": "from €500",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "W2",
+          "duration": "2–4 WEEKS",
+          "title": "CORPORATE WEBSITE",
+          "desc": "Multi‑page presence: content, UX, and a solid technical base.",
+          "bullets": ["UX/UI + information architecture", "CMS or static stack — as needed", "Integrations (forms, CRM, analytics)", "Care plan — optional"],
+          "price": "from €1500",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "W3",
+          "duration": "CUSTOM",
+          "title": "E‑COMMERCE (WEB)",
+          "desc": "Timeline and budget depend on catalog size, payments, and integrations.",
+          "bullets": ["Products, categories, payments", "Shipping + VAT logic", "Performance and security", "Optional: Shopping / Meta catalog"],
+          "price": "Custom quote",
+          "priceNote": "/ per scope"
+        }
+      ],
+      "ads": [
+        {
+          "num": "05",
+          "duration": "MONTHLY",
+          "title": "GOOGLE ADS MANAGEMENT",
+          "desc": "Search + Display campaigns, optimization, and reporting.",
+          "bullets": ["Account/campaign structure", "Keyword research + tuning", "Conversion tracking + analytics", "Monthly performance report", "A/B tests + bid optimization"],
+          "price": "from €299",
+          "priceNote": "/ month"
+        },
+        {
+          "num": "06",
+          "duration": "MONTHLY",
+          "title": "META ADS MANAGEMENT",
+          "desc": "Facebook & Instagram campaigns, audiences, and creative direction.",
+          "bullets": ["Campaign build + management", "Audience creation + targeting", "Creative guidance", "Retargeting", "Monthly reporting + optimization"],
+          "price": "from €249",
+          "priceNote": "/ month"
+        },
+        {
+          "num": "07",
+          "duration": "MONTHLY",
+          "title": "FULL PAID MEDIA",
+          "desc": "Google + Meta + remarketing — one team, one roadmap.",
+          "bullets": ["Google + Meta management", "Cross‑platform remarketing", "Attribution + analytics", "Budget allocation across channels", "Weekly reporting + strategy"],
+          "price": "from €499",
+          "priceNote": "/ month"
+        }
+      ],
+      "ai": [
+        {
+          "num": "08",
+          "duration": "FREE",
+          "title": "AI CONSULTATION",
+          "desc": "Ops review + practical AI roadmap.",
+          "bullets": ["Business process audit", "Tooling recommendations", "Automation map", "Implementation priorities"],
+          "price": "€0",
+          "priceNote": "/ free"
+        },
+        {
+          "num": "09",
+          "duration": "PROJECT",
+          "title": "AI CHATBOT INTEGRATION",
+          "desc": "Customer‑facing chatbot for your site or store.",
+          "bullets": ["AI chatbot build", "Site/Web embed", "Training on your data", "Ongoing tuning"],
+          "price": "from €499",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "10",
+          "duration": "PROJECT",
+          "title": "AI AUTOMATION",
+          "desc": "Workflow automation with Cursor, Claude Code, and adjacent tooling.",
+          "bullets": ["Process automation", "Assistant setups", "Data‑flow automation", "Integrations with existing stacks", "Team enablement"],
+          "price": "from €999",
+          "priceNote": "/ project"
+        },
+        {
+          "num": "11",
+          "duration": "CUSTOM",
+          "title": "CUSTOM AI BUILD",
+          "desc": "Bespoke AI systems — from concept to production.",
+          "bullets": ["Custom AI builds", "Platform integrations", "Project management", "Ongoing support"],
+          "price": "Price on request",
+          "priceNote": ""
+        }
+      ],
+      "support": [
+        {
+          "title": "ESSENTIAL CARE",
+          "desc": "Updates, small fixes, security watch — up to 3 hrs/month.",
+          "price": "€99/mo"
+        },
+        {
+          "title": "EXTENDED CARE",
+          "desc": "Iteration + feature work — up to 8 hrs/month.",
+          "price": "€249/mo"
+        },
+        {
+          "title": "HOURLY",
+          "desc": "Design, dev, consulting, or media tuning as needed.",
+          "price": "€45/hr"
+        }
+      ]
+    }
   },
   "cases": {
     "label": "Work",
     "title": "OUR\nWORK",
-    "desc": "Clients we've worked with. Real results that speak for themselves."
+    "desc": "Clients and domains we've shipped for. Results that speak plainly.",
+    "readMore": "Read more →",
+    "badge": {
+      "website": "Website",
+      "ads": "Ads",
+      "ai": "AI / systems"
+    },
+    "confidential": "Confidential engagement"
+  },
+  "testimonials": {
+    "label": "Reviews",
+    "title": "WHAT\nCLIENTS SAY",
+    "desc": "Short post‑project notes — no fluff.",
+    "items": [
+      {
+        "quote": "Clear outcomes: more qualified leads and cleaner messaging. A team that thinks past pixels into revenue.",
+        "author": "Head of Marketing",
+        "meta": "HoReCa"
+      },
+      {
+        "quote": "Speed and numbers every week. We always knew what worked and what to tweak next.",
+        "author": "Founder",
+        "meta": "Travel services"
+      },
+      {
+        "quote": "Site rework + aligned ads moved ROI in a few months — tangible, not theoretical.",
+        "author": "E‑commerce lead",
+        "meta": "Fashion brand"
+      }
+    ]
   },
   "process": {
     "label": "Process",
-    "title": "HOW WE\nWORK"
+    "title": "HOW WE\nWORK",
+    "steps": [
+      { "num": "01", "title": "Discovery", "desc": "We go deep on your business, market, and competitors.", "icon": "◎" },
+      { "num": "02", "title": "Strategy", "desc": "A data‑backed action plan you can execute against.", "icon": "◈" },
+      { "num": "03", "title": "Design", "desc": "Visual language and interface design.", "icon": "◇" },
+      { "num": "04", "title": "Build", "desc": "Engineering with modern tooling and clean handoff.", "icon": "▣" },
+      { "num": "05", "title": "Launch", "desc": "Go‑live, QA, and performance checks.", "icon": "▲" },
+      { "num": "06", "title": "Optimize", "desc": "Continuous improvement driven by data.", "icon": "◉" }
+    ]
   },
   "stack": {
     "label": "We work with"
   },
+  "canvas": {
+    "techLabel": "Stack",
+    "title": "CODE\nTHAT\nWORKS.",
+    "desc": "Every project ships with clean code, fast UX, and data‑backed decisions. We deploy AI with Cursor, Claude, and adjacent tools — from landing pages to automation."
+  },
   "faq": {
     "label": "FAQ",
-    "title": "FREQUENTLY\nASKED\nQUESTIONS"
+    "title": "FREQUENTLY\nASKED\nQUESTIONS",
+    "items": [
+      {
+        "q": "How much is a website — and how long does it take?",
+        "a": "Standalone web engagements (Websites tab): landing from €500 in 5–7 days; corporate site from €1500 in 2–4 weeks; e‑commerce is scoped individually. Bundles combine site + marketing — see Bundles."
+      },
+      {
+        "q": "Can you work with our existing site?",
+        "a": "Yes. We'll audit what's there, prioritize fixes, and propose concrete improvements — from SEO to conversion optimization."
+      },
+      {
+        "q": "What ad budget do you recommend?",
+        "a": "It depends on the niche. As a starting point, from ~€500/mo on Google Ads and ~€300/mo on Meta Ads. We begin with a testing phase and optimize from results."
+      },
+      {
+        "q": "How do you measure results?",
+        "a": "Each engagement defines KPIs — conversions, ROI, CPL, and channel efficiency. We use Analytics, Tag Manager, and platform data. You get monthly reporting with plain numbers."
+      },
+      {
+        "q": "Do we sign a contract?",
+        "a": "Always. Scope, timelines, pricing, and responsibilities are written down — no surprise fees. Confidentiality is standard; sensitive programs can be covered by a separate NDA."
+      },
+      {
+        "q": "What if I only want a consultation?",
+        "a": "Book a free 30‑minute video call or email us. We'll outline options — no obligation."
+      },
+      {
+        "q": "Which AI services do you offer?",
+        "a": "AI chatbots, workflow automation with Cursor / Claude Code, and integrations. The free AI consult helps decide what to prioritize first."
+      },
+      {
+        "q": "Can I buy ads management without a new website?",
+        "a": "Yes. We run Google Ads, Meta Ads, or full‑stack media — from €249/mo — on your existing properties."
+      },
+      {
+        "q": "How do payments work?",
+        "a": "Bank transfer against VAT invoice. Projects: 50% upfront, balance on completion. Retainers: monthly billing."
+      },
+      {
+        "q": "Do you work internationally?",
+        "a": "Yes — EU and beyond. We work in Lithuanian, English, and Russian. Meetings on Meet or Zoom."
+      }
+    ]
   },
   "contact": {
     "label": "Contact",
     "title": "LET'S\nWORK",
-    "desc": "Get in touch and let's discuss how we can help grow your business.",
+    "desc": "Tell us what you're building — we'll respond with next steps.",
     "name": "Name",
     "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
     "service": "Service",
+    "servicePlaceholder": "Select a service",
     "message": "Message",
     "submit": "SEND INQUIRY",
-    "success": "Thank you! We'll get back to you within 24h."
+    "success": "Thank you! We'll reply within 24h.",
+    "booking": "Or book a video call:",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
-    "tagline": "Digital marketing agency"
-  },
-  "canvas": {
-    "card1": "Traffic",
-    "card2": "Leads",
-    "card3": "Growth"
+    "tagline": "Digital marketing agency",
+    "copy": "© 2026 GRØNK. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "badge": "Confidentiality · contracts · GDPR‑minded ops"
   },
   "cookie": {
-    "text": "This website uses cookies to ensure the best experience.",
+    "text": "This site uses cookies to provide the best experience.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "legal": {
+    "privacyTitle": "Privacy policy",
+    "termsTitle": "Terms of use",
+    "lastUpdated": "Last updated: March 2026",
+    "privacy": [
+      "This policy explains how we handle personal data — clearly, without unnecessary noise. We collect only what's needed to respond to inquiries and deliver services.",
+      "Data from the contact form is used to reply and to continue project communication. Analytics or third‑party tools follow their vendors' policies and your cookie choices.",
+      "We don't sell personal data. Confidential engagements are often covered by an NDA — when signed, those stricter rules apply.",
+      "You may request export or deletion by email. We retain documents as required for accounting and contractual compliance.",
+      "Updates are posted here; material changes may be emailed to active clients."
+    ],
+    "terms": [
+      "By using this site and our services, you accept these terms. Scope, pricing, and timelines are confirmed in proposals and agreements — website copy is indicative.",
+      "Intellectual property: until full payment, deliverables may remain partially retained per contract. After settlement, we transfer agreed‑upon files as specified.",
+      "Confidentiality: both parties protect each other's business information. We can sign an NDA before sharing strategic materials.",
+      "Third‑party tools are provided “as is”; read vendor terms separately. Applicable law: Republic of Lithuania. Disputes: negotiate first, then competent courts in Lithuania."
+    ]
   }
 }

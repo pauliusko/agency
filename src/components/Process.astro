@@ -1,12 +1,7 @@
 ---
-const steps = [
-  { num: '01', title: 'Analizė', desc: 'Gilinamės į jūsų verslą, rinką ir konkurentus.', icon: '◎' },
-  { num: '02', title: 'Strategija', desc: 'Sukuriame duomenimis pagrįstą veiksmų planą.', icon: '◈' },
-  { num: '03', title: 'Dizainas', desc: 'Projektuojame vizualinę tapatybę ir vartotojo sąsają.', icon: '◇' },
-  { num: '04', title: 'Kūrimas', desc: 'Realizuojame sprendimą naudodami moderniausias technologijas.', icon: '▣' },
-  { num: '05', title: 'Paleidimas', desc: 'Startuojame, testuojame ir optimizuojame veikimą.', icon: '▲' },
-  { num: '06', title: 'Optimizavimas', desc: 'Nuolatinė optimizacija ir plėtra pagal duomenis.', icon: '◉' },
-];
+import lt from '../i18n/lt.json';
+
+const steps = lt.process.steps;
 ---
 
 <section class="process" id="process">
@@ -14,35 +9,37 @@ const steps = [
     <div class="process__header">
       <div class="process__header-left" data-animate>
         <span class="process__num">04 — <span data-i18n="process.label">Procesas</span></span>
-        <h2 class="process__title" data-i18n="process.title">KAIP MES<br/>DIRBAME</h2>
+        <h2 class="process__title" data-i18n="process.title" data-i18n-br="true">KAIP MES<br />DIRBAME</h2>
       </div>
     </div>
 
     <div class="process__grid">
-      {steps.map((step, idx) => (
-        <div class="process__card" data-animate data-animate-delay={String(idx + 1)}>
-          <div class="process__card-inner">
-            <div class="process__card-top">
-              <span class="process__card-icon">{step.icon}</span>
-              <span class="process__card-num">{step.num}</span>
+      {
+        steps.map((step, idx) => (
+          <div class="process__card" data-animate data-animate-delay={String(idx + 1)} data-process-step={idx}>
+            <div class="process__card-inner">
+              <div class="process__card-top">
+                <span class="process__card-icon">{step.icon}</span>
+                <span class="process__card-num">{step.num}</span>
+              </div>
+              <h3 class="process__card-title">{step.title}</h3>
+              <p class="process__card-desc">{step.desc}</p>
+              <div class="process__card-line" />
             </div>
-            <h3 class="process__card-title">{step.title}</h3>
-            <p class="process__card-desc">{step.desc}</p>
-            <div class="process__card-line"></div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
 
 <style>
   .process {
-    padding: 120px 0;
+    padding: 72px 0;
   }
 
   .process__header {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 
   .process__num {
@@ -72,6 +69,7 @@ const steps = [
     position: relative;
     overflow: hidden;
     transition: background 0.4s;
+    min-width: 0;
   }
 
   .process__card::before {
@@ -138,11 +136,12 @@ const steps = [
 
   .process__card-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 400;
     letter-spacing: 2px;
     margin-bottom: 12px;
     transition: color 0.3s;
+    word-break: break-word;
   }
 
   .process__card:hover .process__card-title {
@@ -180,6 +179,10 @@ const steps = [
   }
 
   @media (max-width: 600px) {
+    .process {
+      padding: 56px 0;
+    }
+
     .process__grid {
       grid-template-columns: 1fr;
     }

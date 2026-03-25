@@ -1,46 +1,7 @@
 ---
-const faqs = [
-  {
-    q: 'Kiek kainuoja svetainė ir per kiek laiko bus paruošta?',
-    a: 'Priklauso nuo apimties. Paprastas landing page — nuo 500€ per 5-7 dienas. Korporatyvinė svetainė — nuo 1500€ per 2-4 savaites. E-shop — individualiai.',
-  },
-  {
-    q: 'Ar galite dirbti su jau egzistuojančia svetaine?',
-    a: 'Taip. Atliekame svetainės auditą, randame silpnąsias vietas ir pasiūlome konkrečius patobulinimus — nuo SEO iki konversijų optimizavimo.',
-  },
-  {
-    q: 'Kokį reklamos biudžetą rekomenduojate?',
-    a: 'Priklausomai nuo nišos, rekomenduojame nuo 500€/mėn Google Ads ir nuo 300€/mėn Meta Ads. Pradedame su testiniu periodu ir optimizuojame pagal rezultatus.',
-  },
-  {
-    q: 'Kaip matuojate rezultatus?',
-    a: 'Kiekvienas projektas turi aiškius KPI: konversijas, ROI, CPL. Naudojame Google Analytics, Tag Manager ir kitas sistemas. Gaunate mėnesinius ataskaitas su konkrečiais skaičiais.',
-  },
-  {
-    q: 'Ar pasirašome sutartį?',
-    a: 'Taip, visada dirbame su sutartimi. Joje aiškiai nurodoma apimtis, terminai, kaina ir atsakomybės. Jokių paslėptų mokesčių.',
-  },
-  {
-    q: 'Ką daryti, jei noriu tiesiog pasikonsultuoti?',
-    a: 'Užsirezervuokite nemokamą 30 min. video skambutį arba parašykite mums. Aptarsime jūsų situaciją ir pateiksime rekomendacijas — be jokių įsipareigojimų.',
-  },
-  {
-    q: 'Kokias AI paslaugas siūlote?',
-    a: 'Diegiame AI chatbotus, automatizuojame verslo procesus su Cursor, Claude Code ir kitais įrankiais. Taip pat atliekame nemokamą AI konsultaciją, kurios metu įvertiname jūsų procesus ir pateikiame rekomendacijas.',
-  },
-  {
-    q: 'Ar galiu užsakyti tik reklamos paslaugą be svetainės?',
-    a: 'Žinoma. Siūlome atskirą reklamos valdymo paslaugą — Google Ads, Meta Ads arba pilną kanalų valdymą nuo 249€/mėn. Galime dirbti su jūsų esama svetaine.',
-  },
-  {
-    q: 'Kokiais mokėjimo būdais galiu atsiskaityti?',
-    a: 'Mokėjimas bankiniu pavedimu pagal PVM sąskaitą faktūrą. Projektams taikome 50% avansą, likusią dalį — pabaigus darbą. Mėnesinėms paslaugoms — mėnesinis mokėjimas.',
-  },
-  {
-    q: 'Ar dirbate su klientais iš užsienio?',
-    a: 'Taip, dirbame su klientais iš visos Europos ir JAV. Komunikuojame lietuvių, anglų ir rusų kalbomis. Visi susitikimai vyksta per Google Meet arba Zoom.',
-  },
-];
+import lt from '../i18n/lt.json';
+
+const faqs = lt.faq.items;
 ---
 
 <section class="faq" id="faq">
@@ -48,22 +9,24 @@ const faqs = [
     <div class="faq__header">
       <div class="faq__header-left" data-animate>
         <span class="faq__num">06 — <span data-i18n="faq.label">DUK</span></span>
-        <h2 class="faq__title" data-i18n="faq.title">DAŽNIAUSIAI<br/>UŽDUODAMI<br/>KLAUSIMAI</h2>
+        <h2 class="faq__title" data-i18n="faq.title" data-i18n-br="true">DAŽNIAUSIAI<br />UŽDUODAMI<br />KLAUSIMAI</h2>
       </div>
     </div>
 
     <div class="faq__list">
-      {faqs.map((item, idx) => (
-        <div class="faq__item" data-animate data-animate-delay={String(Math.min(idx + 1, 5))}>
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-text">{item.q}</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>{item.a}</p>
+      {
+        faqs.map((item, idx) => (
+          <div class="faq__item" data-animate data-animate-delay={String(Math.min(idx + 1, 5))}>
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span class="faq__q-text">{item.q}</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>{item.a}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
@@ -74,13 +37,11 @@ const faqs = [
       const item = btn.parentElement!;
       const wasOpen = item.classList.contains('open');
 
-      // Close all
       document.querySelectorAll('.faq__item.open').forEach((el) => {
         el.classList.remove('open');
         el.querySelector('.faq__question')!.setAttribute('aria-expanded', 'false');
       });
 
-      // Toggle current
       if (!wasOpen) {
         item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
@@ -91,11 +52,11 @@ const faqs = [
 
 <style>
   .faq {
-    padding: 120px 0;
+    padding: 72px 0;
   }
 
   .faq__header {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 
   .faq__num {
@@ -136,10 +97,11 @@ const faqs = [
   }
 
   .faq__q-text {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text);
     transition: color 0.2s;
+    line-height: 1.35;
   }
 
   .faq__item:hover .faq__q-text,
@@ -164,18 +126,28 @@ const faqs = [
   .faq__answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    transition: max-height 0.5s ease, padding 0.4s ease;
   }
 
   .faq__item.open .faq__answer {
-    max-height: 200px;
+    max-height: 920px;
     padding-bottom: 24px;
   }
 
   .faq__answer p {
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 600px;
+    line-height: 1.75;
+    max-width: 720px;
+  }
+
+  @media (max-width: 600px) {
+    .faq {
+      padding: 56px 0;
+    }
+
+    .faq__q-text {
+      font-size: 16px;
+    }
   }
 </style>

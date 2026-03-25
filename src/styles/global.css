@@ -24,6 +24,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 64px;
+  }
 }
 
 body {
@@ -34,7 +44,35 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Cyrillic: condensed headlines + readable body */
+html.lang-ru body {
+  font-family: 'Manrope', 'DM Sans', system-ui, sans-serif;
+}
+
+html.lang-ru :where(
+  .hero__title,
+  .cases__title,
+  .services__title,
+  .process__title,
+  .canvas-cards__title,
+  .faq__title,
+  .contact__title,
+  .testimonials__title,
+  .service-card__title,
+  .support-card__title,
+  .services__tab,
+  .services__support-title,
+  .process__card-title,
+  .hero__stat-value,
+  .case-row__client,
+  .case-row__metric-value,
+  .footer__logo
+) {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
 }
 
 img, video, svg { display: block; max-width: 100%; height: auto; }
@@ -110,6 +148,12 @@ html {
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    -webkit-overflow-scrolling: touch;
   }
 }

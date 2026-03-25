@@ -15,8 +15,8 @@ const tools = [
 <section class="canvas-cards" id="stack">
   <div class="container canvas-cards__inner">
     <div class="canvas-cards__text" data-animate>
-      <span class="canvas-cards__label">Technologijos</span>
-      <h2 class="canvas-cards__title" data-i18n="canvas.title">KODAS,<br/>KURIS<br/>DIRBA.</h2>
+      <span class="canvas-cards__label" data-i18n="canvas.techLabel">Technologijos</span>
+      <h2 class="canvas-cards__title" data-i18n="canvas.title" data-i18n-br="true">KODAS,<br />KURIS<br />DIRBA.</h2>
       <p class="canvas-cards__desc" data-i18n="canvas.desc">
         Kiekvienas mūsų projektas gimsta iš švaraus kodo, greito dizaino ir duomenimis pagrįstų sprendimų. Diegiame AI sprendimus su Cursor, Claude Code ir kitais įrankiais — nuo svetainės iki automatizacijos.
       </p>
@@ -82,7 +82,7 @@ const tools = [
     ];
 
     let t = 0;
-    const charSpeed = 0.35;
+    const charSpeed = 1.05;
 
     // Floating particles
     const particles = Array.from({ length: 30 }, () => ({
@@ -158,18 +158,28 @@ const tools = [
     }
 
     // Wait for full page load so layout is complete before measuring
-    window.addEventListener('load', () => {
+    function syncWrapSize() {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        wrap.style.minHeight = 'min(72vw, 420px)';
+      } else {
+        wrap.style.minHeight = '';
+      }
       resizeCanvas();
+    }
+
+    window.addEventListener('load', () => {
+      syncWrapSize();
       requestAnimationFrame(draw);
     });
 
-    window.addEventListener('resize', resizeCanvas);
+    syncWrapSize();
+    window.addEventListener('resize', syncWrapSize);
   }
 </script>
 
 <style>
   .canvas-cards {
-    padding: 80px 0;
+    padding: 56px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
@@ -177,8 +187,9 @@ const tools = [
   .canvas-cards__inner {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
-    gap: 48px;
+    gap: 36px;
     align-items: start;
+    min-width: 0;
   }
 
   .canvas-cards__label {
@@ -282,6 +293,9 @@ const tools = [
     aspect-ratio: 4 / 3;
     position: relative;
     border: 1px solid var(--border);
+    min-height: 260px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .canvas-cards__canvas-wrap canvas {
@@ -296,7 +310,8 @@ const tools = [
     }
 
     .canvas-cards__canvas-wrap {
-      aspect-ratio: 1 / 1;
+      aspect-ratio: auto;
+      min-height: min(72vw, 420px);
     }
   }
 </style>

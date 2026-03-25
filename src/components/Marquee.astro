@@ -1,20 +1,20 @@
 ---
-const items = 'META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · ';
-const repeated = items + items + items + items;
+
 ---
 
-<div class="marquee">
-  <div class="marquee__track">
-    <span class="marquee__text">{repeated}</span>
-    <span class="marquee__text" aria-hidden="true">{repeated}</span>
+<div class="marquee" data-i18n-marquee="marquee.text">
+  <div class="marquee__track" data-marquee-track>
+    <span class="marquee__text">META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · AI · </span>
+    <span class="marquee__text" aria-hidden="true">META ADS · BRANDING · E-SHOP · WEB DESIGN · SEO · GOOGLE ADS · AI · </span>
   </div>
 </div>
 
 <style>
   .marquee {
     background: var(--accent);
-    padding: 14px 0;
+    padding: 12px 0;
     overflow: hidden;
+    max-width: 100%;
   }
 
   .marquee:hover .marquee__track {
@@ -25,27 +25,37 @@ const repeated = items + items + items + items;
     display: flex;
     gap: 0;
     width: max-content;
-    animation: marquee 20s linear infinite;
+    max-width: none;
+    animation: marquee 18s linear infinite;
     will-change: transform;
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .marquee__text {
     flex-shrink: 0;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
-    letter-spacing: 4px;
+    font-size: 15px;
+    letter-spacing: 3px;
     color: #0a0a0a;
     white-space: nowrap;
     padding-right: 0;
   }
 
   @keyframes marquee {
-    0% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-    100% { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .marquee__track { animation: none; }
+    .marquee__track {
+      animation: none;
+    }
   }
 </style>

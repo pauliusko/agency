@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import lt from '../i18n/lt.json';
+
+const paras = lt.legal.privacy;
+---
+
+<Layout title="Privatumo politika — GRØNK" description="Kaip tvarkome duomenis, konfidencialumą ir slapukus.">
+  <Nav />
+  <main class="legal-page">
+    <article class="container legal-page__inner">
+      <p class="legal-page__updated" data-i18n="legal.lastUpdated">Atnaujinta: 2026 m. kovas</p>
+      <h1 class="legal-page__title" data-i18n="legal.privacyTitle">Privatumo politika</h1>
+      <div class="legal-page__body">
+        {
+          paras.map((_, i) => (
+            <p class="legal-page__p" data-legal-section="privacy" data-legal-idx={i}>
+              {paras[i]}
+            </p>
+          ))
+        }
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  function applyLegal(json, section) {
+    const list = json?.legal?.[section];
+    if (!Array.isArray(list)) return;
+    document.querySelectorAll(`[data-legal-section="${section}"]`).forEach((el) => {
+      const i = parseInt(el.dataset.legalIdx || '-1', 10);
+      const t = list[i];
+      if (typeof t === 'string') el.textContent = t;
+    });
+  }
+
+  window.addEventListener('gronk:locale', (e) => {
+    const d = e.detail;
+    if (d?.json) applyLegal(d.json, 'privacy');
+  });
+</script>
+
+<style>
+  .legal-page {
+    padding: 100px 0 64px;
+    min-height: 70vh;
+  }
+
+  .legal-page__inner {
+    max-width: 720px;
+  }
+
+  .legal-page__updated {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .legal-page__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+
+  .legal-page__body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .legal-page__p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
-title: "WeardZen — Mados prekės ženklo redizainas"
-client: "WeardZen"
+title: "weardzen.com — mados prekės ženklo redizainas"
+client: "weardzen.com"
 duration: "4 mėn"
 services:
   - Web Design
@@ -21,7 +21,7 @@ tags:
 
 ## Iššūkis
 
-WeardZen — mados ir aksesuarų prekės ženklas, kurio svetainė buvo pasenusi ir neatspindėjo premium prekės ženklo identiteto. Pardavimai online buvo minimalūs, o konkurentai dominavo skaitmeninėje erdvėje.
+Prekės ženklas — mados ir aksesuarų prekės ženklas, kurio svetainė buvo pasenusi ir neatspindėjo premium prekės ženklo identiteto. Pardavimai online buvo minimalūs, o konkurentai dominavo skaitmeninėje erdvėje.
 
 ## Sprendimas
 

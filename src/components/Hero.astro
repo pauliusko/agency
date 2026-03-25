@@ -4,7 +4,7 @@
 <section class="hero" id="hero">
   <canvas id="hero-canvas"></canvas>
   <div class="container hero__content">
-    <span class="hero__label" data-animate data-i18n="hero.label">Digital Agency · Vilnius</span>
+    <span class="hero__label" data-animate data-i18n="hero.label">Digital agency · dirbame visame pasaulyje</span>
     <h1 class="hero__title">
       <span class="hero__line hero__line--outline" data-animate data-animate-delay="1" data-i18n="hero.line1">WEB</span>
       <span class="hero__line hero__line--solid" data-animate data-animate-delay="2" data-i18n="hero.line2">BRAND</span>
@@ -223,6 +223,8 @@
     z-index: 1;
     padding-bottom: 64px;
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .hero__label {
@@ -236,9 +238,11 @@
 
   .hero__title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(80px, 14vw, 180px);
+    font-size: clamp(52px, 12vw, 180px);
     line-height: 0.88;
     font-weight: 400;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .hero__line {
@@ -294,8 +298,10 @@
 
   .hero__stats {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: clamp(16px, 4vw, 40px);
     text-align: left;
+    max-width: 100%;
   }
 
   .hero__stat {
@@ -306,7 +312,7 @@
 
   .hero__stat-value {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 52px;
+    font-size: clamp(36px, 9vw, 52px);
     color: var(--text);
     line-height: 1;
   }

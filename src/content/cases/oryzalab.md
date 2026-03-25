@@ -1,6 +1,6 @@
 ---
-title: "OryzaLab — Kosmetikos prekės ženklo augimas"
-client: "OryzaLab"
+title: "oryzalab.com — kosmetikos prekės ženklo augimas"
+client: "oryzalab.com"
 duration: "5 mėn"
 services:
   - Meta Ads
@@ -21,7 +21,7 @@ tags:
 
 ## Iššūkis
 
-OryzaLab — natūralios kosmetikos prekės ženklas, kuris norėjo padidinti online pardavimus ir išplėsti klientų bazę. Svetainė nebuvo optimizuota konversijoms, o reklamos kampanijos nebuvo sistemingai valdomos.
+Prekės ženklas — natūralios kosmetikos prekės ženklas, kuris norėjo padidinti online pardavimus ir išplėsti klientų bazę. Svetainė nebuvo optimizuota konversijoms, o reklamos kampanijos nebuvo sistemingai valdomos.
 
 ## Sprendimas
 

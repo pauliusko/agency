@@ -1,139 +1,24 @@
 ---
-/* ── Svetainių paketai ── */
-const websiteCards = [
-  {
-    num: '01',
-    duration: '1 MĖN PROGRAMA',
-    title: 'SKAITMENINIS STARTAS',
-    desc: 'Greitas startas internete — svetainė, reklama ir pirmieji klientai per mėnesį.',
-    bullets: ['Landing page arba vizitinė svetainė', 'Google Ads kampanijos paleidimas', 'Bazinis SEO auditas ir optimizacija', 'Socialinių tinklų profilio sutvarkymas', 'Konversijų sekimo konfigūracija'],
-    price: '1490€',
-    priceNote: '/ projektas',
-  },
-  {
-    num: '02',
-    duration: '3 MĖN PROGRAMA',
-    title: 'VERSLO PLĖTRA',
-    desc: 'Stabilus klientų srautas per kelis kanalus su nuolatine optimizacija.',
-    bullets: ['Korporatyvinė svetainė su UX dizainu', 'SEO strategija + turinio planas', 'Google Ads + remarketing kampanijos', 'Meta Ads (Facebook & Instagram)', 'Mėnesinis veiklos reporting', 'A/B testavimas ir optimizacija'],
-    price: '3900€',
-    priceNote: '/ projektas',
-  },
-  {
-    num: '03',
-    duration: '6 MĖN PROGRAMA',
-    title: 'PILNAS VALDYMAS',
-    desc: 'Pilna skaitmeninė strategija — nuo branding iki pardavimų automatizacijos.',
-    bullets: ['Išplėsta svetainė su UX/UI dizainu', 'Pilnas SEO ciklas (on-page + off-page)', 'Google Ads pilnas kampanijų valdymas', 'Meta Ads kelios kampanijos + retargeting', 'Logotipas ir vizualinis identitetas', 'CRM integracija ir lead nurturing', 'Savaitinis reporting ir strategijos koregavimas'],
-    price: '6900€',
-    priceNote: '/ projektas',
-  },
-  {
-    num: '04',
-    duration: 'INDIVIDUALI PROGRAMA',
-    title: 'E-PARDUOTUVĖ',
-    desc: 'Shopify arba WooCommerce e-parduotuvė su pilnu palaikymu.',
-    bullets: ['E-parduotuvė ant Shopify arba WooCommerce', 'Produktų katalogas ir kategorijos', 'Mokėjimo ir pristatymo integracija', 'Google Shopping + Meta katalogo kampanijos', 'SEO produktų puslapiams', 'Konversijų sekimas ir analitika'],
-    price: 'nuo 1000€',
-    priceNote: '/ projektas',
-  },
-];
+import lt from '../i18n/lt.json';
 
-/* ── Reklamos valdymas ── */
-const adsCards = [
-  {
-    num: '05',
-    duration: 'MĖNESINIS',
-    title: 'GOOGLE ADS VALDYMAS',
-    desc: 'Google paieškos ir display kampanijų kūrimas, optimizacija ir reportingas.',
-    bullets: ['Kampanijų struktūros kūrimas', 'Raktažodžių tyrimai ir optimizacija', 'Konversijų sekimas ir analitika', 'Mėnesinis veiklos reportingas', 'A/B testavimas ir bid optimizacija'],
-    price: 'nuo 299€',
-    priceNote: '/ mėn',
-  },
-  {
-    num: '06',
-    duration: 'MĖNESINIS',
-    title: 'META ADS VALDYMAS',
-    desc: 'Facebook ir Instagram kampanijų kūrimas, auditorijų targetavimas ir optimizacija.',
-    bullets: ['Kampanijų kūrimas ir valdymas', 'Auditorijų kūrimas ir targetavimas', 'Vizualinio turinio rekomendacijos', 'Retargeting kampanijos', 'Mėnesinis reporting ir optimizacija'],
-    price: 'nuo 249€',
-    priceNote: '/ mėn',
-  },
-  {
-    num: '07',
-    duration: 'MĖNESINIS',
-    title: 'PILNAS REKLAMOS VALDYMAS',
-    desc: 'Google + Meta + remarketing — visų reklamos kanalų valdymas iš vienos vietos.',
-    bullets: ['Google Ads + Meta Ads valdymas', 'Cross-platform remarketing', 'Konversijų atribucija ir analitika', 'Biudžeto optimizacija tarp kanalų', 'Savaitinis reporting ir strategija'],
-    price: 'nuo 499€',
-    priceNote: '/ mėn',
-  },
-];
+type Card = {
+  num: string;
+  duration: string;
+  title: string;
+  desc: string;
+  bullets: string[];
+  price: string;
+  priceNote: string;
+};
 
-/* ── AI sprendimai ── */
-const aiCards = [
-  {
-    num: '08',
-    duration: 'NEMOKAMA',
-    title: 'AI KONSULTACIJA',
-    desc: 'Procesų automatizavimo galimybių analizė ir AI strategijos rekomendacijos.',
-    bullets: ['Verslo procesų auditas', 'AI įrankių rekomendacijos', 'Automatizacijos galimybių žemėlapis', 'Įgyvendinimo planas ir prioritetai'],
-    price: '0€',
-    priceNote: '/ nemokama',
-  },
-  {
-    num: '09',
-    duration: 'PROJEKTAS',
-    title: 'AI CHATBOT INTEGRACIJA',
-    desc: 'Klientų aptarnavimo chatbot kūrimas ir integracija į svetainę.',
-    bullets: ['Chatbot kūrimas su AI pagrindu', 'Integracija į svetainę ar e-parduotuvę', 'Treniravimas su jūsų duomenimis', 'Nuolatinė priežiūra ir optimizacija'],
-    price: 'nuo 499€',
-    priceNote: '/ projektas',
-  },
-  {
-    num: '10',
-    duration: 'PROJEKTAS',
-    title: 'AI AUTOMATIZACIJA',
-    desc: 'Darbo eigos automatizavimas su Cursor, Claude Code ir kitais AI įrankiais.',
-    bullets: ['Darbo procesų automatizavimas', 'AI asistentų konfigūracija', 'Duomenų apdorojimo automatizacija', 'Integracija su esamomis sistemomis', 'Komandos apmokymas dirbti su AI'],
-    price: 'nuo 999€',
-    priceNote: '/ projektas',
-  },
-  {
-    num: '11',
-    duration: 'INDIVIDUALUS',
-    title: 'CUSTOM AI SPRENDIMAS',
-    desc: 'Individualus AI sprendimas, pritaikytas jūsų verslo poreikiams — nuo idėjos iki įgyvendinimo.',
-    bullets: ['Individualių AI sistemų kūrimas', 'Integracija su esamomis platformomis', 'Pilnas projekto valdymas', 'Nuolatinis palaikymas ir vystymas'],
-    price: 'Kaina pagal užklausą',
-    priceNote: '',
-  },
+const cardData = lt.services.cardData;
+const categories: { id: keyof typeof cardData; tabKey: string }[] = [
+  { id: 'bundles', tabKey: 'services.tab.bundles' },
+  { id: 'website', tabKey: 'services.tab.website' },
+  { id: 'ads', tabKey: 'services.tab.ads' },
+  { id: 'ai', tabKey: 'services.tab.ai' },
 ];
-
-/* ── Palaikymas ── */
-const supportPlans = [
-  {
-    title: 'BAZINĖ PRIEŽIŪRA',
-    desc: 'Svetainės naujinimai, smulkūs taisymai ir saugumo stebėjimas — iki 3 val. per mėnesį.',
-    price: '99€/mėn',
-  },
-  {
-    title: 'IŠPLĖSTINĖ PRIEŽIŪRA',
-    desc: 'Sistemos vystymas, naujų funkcijų programavimas ir optimizavimas — iki 8 val. per mėnesį.',
-    price: '249€/mėn',
-  },
-  {
-    title: 'VALANDINIS DARBAS',
-    desc: 'Dizainas, programavimas, konsultacijos ar reklamos optimizacija pagal poreikį.',
-    price: '45€/val.',
-  },
-];
-
-const categories = [
-  { id: 'websites', label: 'SVETAINĖS', cards: websiteCards },
-  { id: 'ads', label: 'REKLAMA', cards: adsCards },
-  { id: 'ai', label: 'AI SPRENDIMAI', cards: aiCards },
-];
+const supportPlans = cardData.support;
 ---
 
 <section class="services" id="services">
@@ -141,72 +26,125 @@ const categories = [
     <div class="services__header">
       <div class="services__header-left" data-animate>
         <span class="services__num">02 — <span data-i18n="services.label">Paslaugos</span></span>
-        <h2 class="services__title" data-i18n="services.title">PASLAUGOS<br/>IR KAINOS</h2>
+        <h2 class="services__title" data-animate data-i18n="services.title" data-i18n-br="true">PASLAUGOS<br />IR KAINOS</h2>
       </div>
       <p class="services__header-desc" data-animate data-animate-delay="1" data-i18n="services.desc">
-        Pilnas skaitmeninių sprendimų spektras — nuo svetainių iki AI automatizacijos.
+        Rinkiniai, atskiras svetainių kūrimas, reklama ir AI — viename vietoje.
       </p>
     </div>
 
-    <!-- Category Tabs -->
     <div class="services__tabs" data-animate>
       {categories.map((cat, i) => (
         <button
-          class={`services__tab ${i === 0 ? 'services__tab--active' : ''}`}
+          type="button"
+          class:list={['services__tab', { 'services__tab--active': i === 0 }]}
           data-tab={cat.id}
+          data-i18n={cat.tabKey}
         >
-          {cat.label}
+          {lt.services.tab[cat.id as keyof typeof lt.services.tab]}
         </button>
       ))}
     </div>
 
-    <!-- Category Sections -->
-    {categories.map((cat, catIdx) => (
-      <div class={`services__category ${catIdx === 0 ? 'services__category--active' : ''}`} data-category={cat.id}>
-        <div class="services__grid">
-          {cat.cards.map((card, idx) => (
-            <div class="service-card" data-animate data-animate-delay={String(idx + 1)}>
-              <div class="service-card__top">
-                <span class="service-card__num">{card.num}</span>
-                <span class="service-card__badge">{card.duration}</span>
-              </div>
-              <h3 class="service-card__title">{card.title}</h3>
-              <p class="service-card__desc">{card.desc}</p>
-              <ul class="service-card__bullets">
-                {card.bullets.map((b) => (
-                  <li>↘ {b}</li>
-                ))}
-              </ul>
-              <div class="service-card__bottom">
-                <div class="service-card__price-wrap">
-                  <span class="service-card__price">{card.price}</span>
-                  <span class="service-card__price-note">{card.priceNote}</span>
+    {
+      categories.map((cat, catIdx) => (
+        <div class:list={['services__category', { 'services__category--active': catIdx === 0 }]} data-category={cat.id}>
+          <div class="services__grid">
+            {(cardData[cat.id] as Card[]).map((card, idx) => (
+              <div class="service-card" data-animate data-animate-delay={String(idx + 1)} data-svc-cat={cat.id} data-svc-idx={idx}>
+                <div class="service-card__top">
+                  <span class="service-card__num">{card.num}</span>
+                  <span class="service-card__badge">{card.duration}</span>
                 </div>
-                <a href="#contact" class="service-card__cta" data-i18n="services.cta">SIŲSTI UŽKLAUSĄ →</a>
+                <h3 class="service-card__title">{card.title}</h3>
+                <p class="service-card__desc">{card.desc}</p>
+                <ul class="service-card__bullets">
+                  {card.bullets.map((b) => (
+                    <li>↘ {b}</li>
+                  ))}
+                </ul>
+                <div class="service-card__bottom">
+                  <div class="service-card__price-wrap">
+                    <span class="service-card__price">{card.price}</span>
+                    <span class="service-card__price-note">{card.priceNote}</span>
+                  </div>
+                  <a href="#contact" class="service-card__cta" data-i18n="services.cta">SIŲSTI UŽKLAUSĄ →</a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
 
     <div class="services__support" data-animate>
-      <h3 class="services__support-title">PALAIKYMAS IR PAPILDOMOS PASLAUGOS</h3>
+      <h3 class="services__support-title" data-i18n="services.supportTitle">PALAIKYMAS IR PAPILDOMOS PASLAUGOS</h3>
       <div class="services__support-grid">
-        {supportPlans.map((plan) => (
-          <div class="support-card">
-            <h4 class="support-card__title">{plan.title}</h4>
-            <p class="support-card__desc">{plan.desc}</p>
-            <span class="support-card__price">{plan.price}</span>
-          </div>
-        ))}
+        {
+          supportPlans.map((plan, idx) => (
+            <div class="support-card" data-svc-support={idx}>
+              <h4 class="support-card__title">{plan.title}</h4>
+              <p class="support-card__desc">{plan.desc}</p>
+              <span class="support-card__price">{plan.price}</span>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
 </section>
 
 <script>
-  // Service card mouse follow
+  function applyServiceCards(json: any) {
+    const data = json.services?.cardData;
+    if (!data) return;
+
+    document.querySelectorAll<HTMLElement>('[data-svc-cat]').forEach((el) => {
+      const cat = el.dataset.svcCat as string;
+      const idx = parseInt(el.dataset.svcIdx || '0', 10);
+      const cards = data[cat] as { duration: string; title: string; desc: string; bullets: string[]; price: string; priceNote: string }[];
+      const card = cards?.[idx];
+      if (!card) return;
+
+      const badge = el.querySelector('.service-card__badge');
+      const title = el.querySelector('.service-card__title');
+      const desc = el.querySelector('.service-card__desc');
+      const price = el.querySelector('.service-card__price');
+      const note = el.querySelector('.service-card__price-note');
+      if (badge) badge.textContent = card.duration;
+      if (title) title.textContent = card.title;
+      if (desc) desc.textContent = card.desc;
+      if (price) price.textContent = card.price;
+      if (note) note.textContent = card.priceNote;
+
+      const lis = el.querySelectorAll('.service-card__bullets li');
+      card.bullets.forEach((b, i) => {
+        if (lis[i]) lis[i].textContent = `↘ ${b}`;
+      });
+    });
+
+    const sup = data.support;
+    if (Array.isArray(sup)) {
+      document.querySelectorAll<HTMLElement>('[data-svc-support]').forEach((el) => {
+        const idx = parseInt(el.dataset.svcSupport || '0', 10);
+        const plan = sup[idx];
+        if (!plan) return;
+        const t = el.querySelector('.support-card__title');
+        const d = el.querySelector('.support-card__desc');
+        const p = el.querySelector('.support-card__price');
+        if (t) t.textContent = plan.title;
+        if (d) d.textContent = plan.desc;
+        if (p) p.textContent = plan.price;
+      });
+    }
+  }
+
+  window.addEventListener('gronk:locale', ((e: CustomEvent<{ json: Json }>) => {
+    if (e.detail?.json) applyServiceCards(e.detail.json);
+  }) as EventListener);
+</script>
+
+<script>
   document.querySelectorAll<HTMLElement>('.service-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -215,23 +153,17 @@ const categories = [
     });
   });
 
-  // Category tabs
   document.querySelectorAll<HTMLElement>('.services__tab').forEach((tab) => {
     tab.addEventListener('click', () => {
       const targetId = tab.dataset.tab;
 
-      // Toggle active tab
       document.querySelectorAll('.services__tab').forEach((t) => t.classList.remove('services__tab--active'));
       tab.classList.add('services__tab--active');
 
-      // Toggle active category
       document.querySelectorAll('.services__category').forEach((cat) => {
         const el = cat as HTMLElement;
-        if (el.dataset.category === targetId) {
-          el.classList.add('services__category--active');
-        } else {
-          el.classList.remove('services__category--active');
-        }
+        if (el.dataset.category === targetId) el.classList.add('services__category--active');
+        else el.classList.remove('services__category--active');
       });
     });
   });
@@ -239,14 +171,14 @@ const categories = [
 
 <style>
   .services {
-    padding: 120px 0;
+    padding: 72px 0;
   }
 
   .services__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   .services__num {
@@ -273,18 +205,18 @@ const categories = [
     padding-top: 24px;
   }
 
-  /* ── Tabs ── */
   .services__tabs {
     display: flex;
-    gap: 0;
-    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 28px;
     border-bottom: 1px solid var(--border);
   }
 
   .services__tab {
-    padding: 16px 32px;
+    padding: 14px 22px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     color: var(--text-muted);
     background: none;
@@ -305,7 +237,6 @@ const categories = [
     border-bottom-color: var(--accent);
   }
 
-  /* ── Categories ── */
   .services__category {
     display: none;
   }
@@ -314,15 +245,15 @@ const categories = [
     display: block;
   }
 
-  /* ── Grid ── */
   .services__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
   }
 
-  .services__category[data-category="ads"] .services__grid,
-  .services__category[data-category="ai"] .services__grid {
+  .services__category[data-category='ads'] .services__grid,
+  .services__category[data-category='ai'] .services__grid,
+  .services__category[data-category='website'] .services__grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
@@ -335,6 +266,7 @@ const categories = [
     transition: border-color 0.3s, background 0.3s;
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
 
   .service-card::before {
@@ -383,7 +315,7 @@ const categories = [
 
   .service-card__title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;
+    font-size: clamp(22px, 3vw, 32px);
     letter-spacing: 1px;
     font-weight: 400;
     margin-top: 24px;
@@ -424,9 +356,10 @@ const categories = [
 
   .service-card__price {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px);
     color: var(--accent);
     line-height: 1;
+    word-break: break-word;
   }
 
   .service-card__price-note {
@@ -454,25 +387,26 @@ const categories = [
     color: #0a0a0a;
   }
 
+  @media (max-width: 900px) {
+    .services__grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
   @media (max-width: 600px) {
+    .services {
+      padding: 56px 0;
+    }
+
     .services__header {
       flex-direction: column;
       gap: 16px;
-    }
-
-    .services__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .services__tabs {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      margin-bottom: 28px;
     }
 
     .services__tab {
-      padding: 12px 20px;
-      font-size: 15px;
-      white-space: nowrap;
+      padding: 12px 16px;
+      font-size: 14px;
     }
 
     .services__support-grid {
@@ -480,19 +414,18 @@ const categories = [
     }
   }
 
-  /* Support / Maintenance section */
   .services__support {
-    margin-top: 64px;
-    padding-top: 48px;
+    margin-top: 48px;
+    padding-top: 40px;
     border-top: 1px solid var(--border);
   }
 
   .services__support-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 2px;
     color: var(--text-muted);
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
   .services__support-grid {
@@ -509,6 +442,7 @@ const categories = [
     gap: 8px;
     border-top: 2px solid transparent;
     transition: border-color 0.3s, background 0.3s;
+    min-width: 0;
   }
 
   .support-card:hover {
@@ -536,5 +470,6 @@ const categories = [
     color: var(--accent);
     line-height: 1;
     margin-top: 8px;
+    word-break: break-word;
   }
 </style>

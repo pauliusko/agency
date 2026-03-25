@@ -1,6 +1,6 @@
 ---
-title: "BarmenForYou — HoReCa verslo skaitmeninimas"
-client: "BarmenForYou"
+title: "barmenforyou.lt — HoReCa verslo skaitmeninimas"
+client: "barmenforyou.lt"
 duration: "3 mėn"
 services:
   - WordPress
@@ -21,7 +21,7 @@ tags:
 
 ## Iššūkis
 
-BarmenForYou — barmenų nuomos paslaugų teikėjas, kuris neturėjo profesionalios skaitmeninės prezentacijos. Klientai buvo randami tik per pažintis ir rekomendacijas, o konkurentai jau aktyviai naudojo skaitmeninę reklamą.
+Projektas — barmenų nuomos paslaugų teikėjas, kuris neturėjo profesionalios skaitmeninės prezentacijos. Klientai buvo randami tik per pažintis ir rekomendacijas, o konkurentai jau aktyviai naudojo skaitmeninę reklamą.
 
 ## Sprendimas
 

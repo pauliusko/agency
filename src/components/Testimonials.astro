@@ -1,0 +1,142 @@
+---
+import lt from '../i18n/lt.json';
+
+const items = lt.testimonials.items;
+---
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials__header">
+      <div class="testimonials__header-left" data-animate>
+        <span class="testimonials__num">05 — <span data-i18n="testimonials.label">Atsiliepimai</span></span>
+        <h2 class="testimonials__title" data-i18n="testimonials.title" data-i18n-br="true">
+          KĄ SAKO<br />KLIENTAI
+        </h2>
+      </div>
+      <p class="testimonials__desc" data-animate data-animate-delay="1" data-i18n="testimonials.desc">
+        Trumpi atsiliepimai po bendradarbiavimo — be perteklinės pompastikos.
+      </p>
+    </div>
+
+    <div class="testimonials__grid">
+      {
+        items.map((item, idx) => (
+          <blockquote class="testimonials__card" data-animate data-animate-delay={String(Math.min(idx + 1, 3))} data-testimonial={idx}>
+            <p class="testimonials__quote" data-t-quote>{item.quote}</p>
+            <footer class="testimonials__footer">
+              <span class="testimonials__author" data-t-author>{item.author}</span>
+              <span class="testimonials__meta" data-t-meta>{item.meta}</span>
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 72px 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .testimonials__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .testimonials__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .testimonials__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  .testimonials__desc {
+    max-width: 320px;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-top: 24px;
+  }
+
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .testimonials__card {
+    margin: 0;
+    padding: 32px 28px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100%;
+    min-width: 0;
+  }
+
+  .testimonials__quote {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .testimonials__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  .testimonials__author {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+
+  .testimonials__meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 900px) {
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials__header {
+      flex-direction: column;
+      margin-bottom: 28px;
+    }
+
+    .testimonials__desc {
+      padding-top: 0;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .testimonials {
+      padding: 56px 0;
+    }
+  }
+</style>

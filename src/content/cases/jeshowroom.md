@@ -1,6 +1,6 @@
 ---
-title: "JetShowroom — Kelionių sektoriaus reklama"
-client: "JetShowroom"
+title: "jeshowroom.com — kelionių sektoriaus reklama"
+client: "jeshowroom.com"
 duration: "4 mėn"
 services:
   - Meta Ads
@@ -21,14 +21,14 @@ tags:
 
 ## Iššūkis
 
-JetShowroom — kelionių organizavimo kompanija, siekusi pritraukti daugiau klientų per skaitmeninius kanalus. Didžioji dalis užklausų buvo gaunama per senus kontaktus, o skaitmeninė prezentacija buvo silpna.
+Kelionių organizatorius siekė pritraukti daugiau užklausų per skaitmeninius kanalus. Didžioji dalis užklausų buvo gaunama per senus kontaktus, o skaitmeninė komunikacija buvo per silpna.
 
 ## Sprendimas
 
 Sukūrėme integruotą skaitmeninę kampaniją:
 
-- **Meta Ads** — vizualiai stiprūs video ir carousel skelbimai, rodantys kelionių pasiūlymus ir klientų patirtis
-- **Google Ads** — paieškos ir display kampanijos, targetuojant premium kelionių paieškas
+- **Meta Ads** — video ir carousel formatai, rodantys pasiūlymus ir patirtis
+- **Google Ads** — paieška ir display, targetuojant premium kelionių užklausas
 - **Branding** — vizualinio identiteto atnaujinimas skaitmeniniams kanalams
 
 ## Rezultatai
@@ -40,5 +40,5 @@ Per 4 mėnesių kampanijos periodą:
 - **Svetainės srautas** išaugo 150%
 - **Vidutinė užklausos vertė** padidėjo 25%
 
-> "Profesionaliai suplanuota reklama pakeitė mūsų verslo požiūrį į skaitmeninę rinkodarą."
-> — JetShowroom vadovas
+> „Profesionaliai suplanuota reklama pakeitė požiūrį į skaitmeninę plėtrą.“
+> — Projekto vadovas

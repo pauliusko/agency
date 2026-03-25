@@ -1,6 +1,6 @@
 ---
-title: "SkyJet.lt — Kelionių paslaugų reklama"
-client: "SkyJet.lt"
+title: "skyjet.lt — kelionių paslaugų reklama"
+client: "skyjet.lt"
 duration: "6 mėn"
 services:
   - Meta Ads

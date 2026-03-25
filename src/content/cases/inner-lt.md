@@ -1,6 +1,6 @@
 ---
-title: "Inner.lt — Sveikatos sektoriaus skaitmeninė rinkodara"
-client: "Inner.lt"
+title: "inner.lt — sveikatos sektoriaus skaitmeninė rinkodara"
+client: "inner.lt"
 duration: "4 mėn"
 services:
   - Meta Ads
