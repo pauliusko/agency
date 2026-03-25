@@ -33,7 +33,17 @@
       ctx.scale(dpr, dpr);
     }
 
-    const ro = new ResizeObserver(() => resize());
+    let lastW = 0;
+    let lastH = 0;
+    const ro = new ResizeObserver((entries) => {
+      const rect = entries[0].contentRect;
+      if (Math.abs(rect.width - lastW) > 1 || Math.abs(rect.height - lastH) > 1) {
+        lastW = rect.width;
+        lastH = rect.height;
+        resize();
+        t = 0;
+      }
+    });
     ro.observe(wrap);
 
     const lines = [
@@ -96,7 +106,7 @@
       lines.forEach((line, i) => {
         const y = startY + i * lineHeight;
         if (y > h - 20) return;
-        ctx.font = `${fontSize}px "SF Mono", "Fira Code", "Consolas", monospace`;
+        ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
         ctx.textBaseline = 'top';
 
         // Line number
@@ -111,18 +121,9 @@
         charCount += line.text.length;
 
         if (displayText.length > 0) {
-          // Glow for keywords
-          if (line.color === '#c8f73a' || line.color === '#FF8C42' || line.color === '#00D9A6') {
-            ctx.save();
-            ctx.shadowBlur = 6;
-            ctx.shadowColor = line.color;
-            ctx.fillStyle = line.color;
-            ctx.fillText(displayText, startX, y);
-            ctx.restore();
-          } else {
-            ctx.fillStyle = line.color;
-            ctx.fillText(displayText, startX, y);
-          }
+          // Draw text without shadowBlur to fix Safari artifact bugs
+          ctx.fillStyle = line.color;
+          ctx.fillText(displayText, startX, y);
 
           // Cursor blink at end of current line
           if (visibleChars <= line.text.length && visibleChars > 0) {
