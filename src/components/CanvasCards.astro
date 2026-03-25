@@ -24,29 +24,17 @@
     const dpr = window.devicePixelRatio || 1;
     let w: number, h: number;
 
-    function resize() {
-      const rect = canvas.getBoundingClientRect();
+    function resizeCanvas() {
+      const rect = wrap.getBoundingClientRect();
       w = rect.width;
       h = rect.height;
       canvas.width = w * dpr;
       canvas.height = h * dpr;
       canvas.style.width = rect.width + 'px';
       canvas.style.height = rect.height + 'px';
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
-
-    let lastW = 0;
-    let lastH = 0;
-    const ro = new ResizeObserver((entries) => {
-      const rect = entries[0].contentRect;
-      if (Math.abs(rect.width - lastW) > 1 || Math.abs(rect.height - lastH) > 1) {
-        lastW = rect.width;
-        lastH = rect.height;
-        resize();
-        t = 0;
-      }
-    });
-    ro.observe(wrap);
 
     const lines = [
       { text: 'const launch = async () => {', color: '#c8f73a', indent: 0 },
@@ -123,7 +111,6 @@
         charCount += line.text.length;
 
         if (displayText.length > 0) {
-          // Draw text without shadowBlur to fix Safari artifact bugs
           ctx.fillStyle = line.color;
           ctx.fillText(displayText, startX, y);
 
@@ -145,8 +132,13 @@
       requestAnimationFrame(draw);
     }
 
-    draw();
-    // Resize handling is now done by ResizeObserver
+    // Wait for full page load so layout is complete before measuring
+    window.addEventListener('load', () => {
+      resizeCanvas();
+      requestAnimationFrame(draw);
+    });
+
+    window.addEventListener('resize', resizeCanvas);
   }
 </script>
 
