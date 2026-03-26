@@ -1,6 +1,6 @@
 ---
-title: "jeshowroom.com — kelionių sektoriaus reklama"
-client: "jeshowroom.com"
+title: "jetshowroom.com — kelionių sektoriaus reklama"
+client: "jetshowroom.com"
 duration: "4 mėn"
 services:
   - Meta Ads
