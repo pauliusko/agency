@@ -139,7 +139,7 @@ const supportPlans = cardData.support;
     }
   }
 
-  window.addEventListener('gronk:locale', ((e: CustomEvent<{ json: Json }>) => {
+  window.addEventListener('gronk:locale', ((e: CustomEvent<{ json: any }>) => {
     if (e.detail?.json) applyServiceCards(e.detail.json);
   }) as EventListener);
 </script>
@@ -252,8 +252,7 @@ const supportPlans = cardData.support;
   }
 
   .services__category[data-category='ads'] .services__grid,
-  .services__category[data-category='ai'] .services__grid,
-  .services__category[data-category='website'] .services__grid {
+  .services__category[data-category='ai'] .services__grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 

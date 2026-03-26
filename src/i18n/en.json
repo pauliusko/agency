@@ -63,15 +63,6 @@
           "bullets": ["Larger site with UX/UI", "Full SEO cycle (on/off‑page)", "Google Ads full management", "Multi Meta campaigns + retargeting", "Logo + visual identity", "CRM integration + lead nurturing", "Weekly reporting + strategy updates"],
           "price": "€6900",
           "priceNote": "/ project"
-        },
-        {
-          "num": "04",
-          "duration": "CUSTOM PROGRAM",
-          "title": "E‑COMMERCE",
-          "desc": "Shopify or WooCommerce store with ongoing support.",
-          "bullets": ["Store on Shopify or WooCommerce", "Catalog + categories", "Payments + shipping integrations", "Google Shopping + Meta catalog ads", "Product SEO", "Tracking + analytics"],
-          "price": "from €1000",
-          "priceNote": "/ project"
         }
       ],
       "website": [
@@ -90,7 +81,7 @@
           "title": "CORPORATE WEBSITE",
           "desc": "Multi‑page presence: content, UX, and a solid technical base.",
           "bullets": ["UX/UI + information architecture", "CMS or static stack — as needed", "Integrations (forms, CRM, analytics)", "Care plan — optional"],
-          "price": "from €1500",
+          "price": "from €1000",
           "priceNote": "/ project"
         },
         {
@@ -101,6 +92,15 @@
           "bullets": ["Products, categories, payments", "Shipping + VAT logic", "Performance and security", "Optional: Shopping / Meta catalog"],
           "price": "Custom quote",
           "priceNote": "/ per scope"
+        },
+        {
+          "num": "W4",
+          "duration": "CUSTOM PROGRAM",
+          "title": "E‑COMMERCE",
+          "desc": "Shopify or WooCommerce store with ongoing support.",
+          "bullets": ["Store on Shopify or WooCommerce", "Catalog + categories", "Payments + shipping integrations", "Google Shopping + Meta catalog ads", "Product SEO", "Tracking + analytics"],
+          "price": "from €1000",
+          "priceNote": "/ project"
         }
       ],
       "ads": [
@@ -110,7 +110,7 @@
           "title": "GOOGLE ADS MANAGEMENT",
           "desc": "Search + Display campaigns, optimization, and reporting.",
           "bullets": ["Account/campaign structure", "Keyword research + tuning", "Conversion tracking + analytics", "Monthly performance report", "A/B tests + bid optimization"],
-          "price": "from €299",
+          "price": "from €450",
           "priceNote": "/ month"
         },
         {
@@ -119,7 +119,7 @@
           "title": "META ADS MANAGEMENT",
           "desc": "Facebook & Instagram campaigns, audiences, and creative direction.",
           "bullets": ["Campaign build + management", "Audience creation + targeting", "Creative guidance", "Retargeting", "Monthly reporting + optimization"],
-          "price": "from €249",
+          "price": "from €400",
           "priceNote": "/ month"
         },
         {
@@ -128,7 +128,7 @@
           "title": "FULL PAID MEDIA",
           "desc": "Google + Meta + remarketing — one team, one roadmap.",
           "bullets": ["Google + Meta management", "Cross‑platform remarketing", "Attribution + analytics", "Budget allocation across channels", "Weekly reporting + strategy"],
-          "price": "from €499",
+          "price": "from €800",
           "priceNote": "/ month"
         }
       ],
@@ -148,16 +148,16 @@
           "title": "AI CHATBOT INTEGRATION",
           "desc": "Customer‑facing chatbot for your site or store.",
           "bullets": ["AI chatbot build", "Site/Web embed", "Training on your data", "Ongoing tuning"],
-          "price": "from €499",
+          "price": "from €1490",
           "priceNote": "/ project"
         },
         {
           "num": "10",
           "duration": "PROJECT",
           "title": "AI AUTOMATION",
-          "desc": "Workflow automation with Cursor, Claude Code, and adjacent tooling.",
+          "desc": "Workflow automation with Cursor, Claude Code, and adjacent tooling. Workflow automation with Make/Zapier/n8n",
           "bullets": ["Process automation", "Assistant setups", "Data‑flow automation", "Integrations with existing stacks", "Team enablement"],
-          "price": "from €999",
+          "price": "from €500",
           "priceNote": "/ project"
         },
         {
