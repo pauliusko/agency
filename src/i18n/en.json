@@ -86,15 +86,6 @@
         },
         {
           "num": "W3",
-          "duration": "CUSTOM",
-          "title": "E‑COMMERCE (WEB)",
-          "desc": "Timeline and budget depend on catalog size, payments, and integrations.",
-          "bullets": ["Products, categories, payments", "Shipping + VAT logic", "Performance and security", "Optional: Shopping / Meta catalog"],
-          "price": "Custom quote",
-          "priceNote": "/ per scope"
-        },
-        {
-          "num": "W4",
           "duration": "CUSTOM PROGRAM",
           "title": "E‑COMMERCE",
           "desc": "Shopify or WooCommerce store with ongoing support.",

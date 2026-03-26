@@ -86,15 +86,6 @@
         },
         {
           "num": "W3",
-          "duration": "INDIVIDUALU",
-          "title": "E-PARDUOTUVĖ (WEB)",
-          "desc": "Kaina ir terminai priklauso nuo katalogo, integracijų ir mokėjimų.",
-          "bullets": ["Produktai, kategorijos ir mokėjimai", "Pristatymas ir PVM logika", "Performance ir saugumas", "Pasirinktinai: Shopping / Meta katalogas"],
-          "price": "Individualiai",
-          "priceNote": "/ pagal specifikaciją"
-        },
-        {
-          "num": "W4",
           "duration": "INDIVIDUALI PROGRAMA",
           "title": "E-PARDUOTUVĖ",
           "desc": "Shopify arba WooCommerce e-parduotuvė su pilnu palaikymu.",
