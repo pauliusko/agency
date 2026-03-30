@@ -39,5 +39,5 @@ Premium skincare brendas iš Prancūzijos. Pagrindinės problemos:
 - **3.5x ROAS**
 - **+120%** pardavimų nuo optimizacijos pradžios
 
-> „Supratome, kad premium brande galima efektyviai reklamuoti — tereikia tinkamo balando tarp image ir performance."
+> „Supratome, kad premium brendą galima efektyviai reklamuoti — tereikia tinkamo balanso tarp image ir performance."
 > — Įkūrėja, kosmetikos sektorius
