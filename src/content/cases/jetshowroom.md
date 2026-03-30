@@ -1,44 +1,43 @@
 ---
-title: "jetshowroom.com — kelionių sektoriaus reklama"
+title: "jetshowroom.com — globalaus private jet brando reklama"
 client: "jetshowroom.com"
 duration: "4 mėn"
 services:
   - Meta Ads
   - Google Ads
-  - Branding
+  - Lead filtravimas
 metrics:
   - { value: "+92%", label: "Konversijų" }
   - { value: "2.8x", label: "ROAS" }
-  - { value: "+150%", label: "Srauto" }
-description: "Kelionių paslaugų skaitmeninės reklamos kampanijos su Meta ir Google Ads"
-category: "Kelionės"
+  - { value: "+50%", label: "Leadų kokybė" }
+description: "Išfiltravome žemos kokybės užklausas ir pagerinome leadų kokybę."
+category: "Private Jets"
 date: "2025-07-10"
 tags:
   - meta-ads
   - google-ads
-  - branding
+  - lead-filtravimas
 ---
 
 ## Iššūkis
 
-Kelionių organizatorius siekė pritraukti daugiau užklausų per skaitmeninius kanalus. Didžioji dalis užklausų buvo gaunama per senus kontaktus, o skaitmeninė komunikacija buvo per silpna.
+Private jet niša, bet labiau globali nei SkyJet. Pagrindinės problemos:
+- **Daug feikinių leadų** — žmonės be realaus biudžeto paliko užklausas
+- **Silpnas targetavimas** — reklamos pasiekdavo ne tą auditoriją
+- **Žema konversijų kokybė** — per didelis atotrūkis tarp kliko ir realaus kliento
 
 ## Sprendimas
 
-Sukūrėme integruotą skaitmeninę kampaniją:
-
-- **Meta Ads** — video ir carousel formatai, rodantys pasiūlymus ir patirtis
-- **Google Ads** — paieška ir display, targetuojant premium kelionių užklausas
-- **Branding** — vizualinio identiteto atnaujinimas skaitmeniniams kanalams
+- **Perdirbome auditorijas** — luxury positioning per kreativus ir targetavimą
+- **Pridėjome filtravimą per kreativus** — premium vizualai atbaido netikslinius leadus
+- **Optimizavome kampanijas po konversijas** — ne tik klikams, bet realiam rezultatui
+- **Testėme skirtingus offerius** — radome veikiantį derinį
 
 ## Rezultatai
 
-Per 4 mėnesių kampanijos periodą:
+- **+92%** konversijų nuo optimizacijos pradžios
+- **2.8x ROAS**
+- **Kokybiškesni leadai** — mažiau „turistų", daugiau realių klientų
 
-- **Konversijų rodiklis** padidėjo 92%
-- **ROAS** pasiekė 2.8x
-- **Svetainės srautas** išaugo 150%
-- **Vidutinė užklausos vertė** padidėjo 25%
-
-> „Profesionaliai suplanuota reklama pakeitė požiūrį į skaitmeninę plėtrą.“
-> — Projekto vadovas
+> „Užklausų kokybė dramatiškai pagerėjo — dabar dirbame su tikrais pirkėjais, ne smalsautojais."
+> — Rinkodaros vadovas, aviacijos sektorius

@@ -1,44 +1,40 @@
 ---
-title: "barmenforyou.lt — HoReCa verslo skaitmeninimas"
+title: "barmenforyou.lt — renginių barmenų reklama"
 client: "barmenforyou.lt"
 duration: "3 mėn"
 services:
-  - WordPress
+  - Landing Page
+  - Meta Ads
   - Google Ads
-  - SEO
 metrics:
   - { value: "+85%", label: "Užklausų" }
-  - { value: "2.4x", label: "ROI" }
-  - { value: "+60%", label: "Organinio srauto" }
-description: "WordPress svetainės kūrimas ir reklamos kampanijų paleidimas HoReCa sektoriuje"
+  - { value: "Stabilus", label: "Leadų srautas" }
+  - { value: "+35%", label: "Leadų kokybė" }
+description: "Sukūrėme sistemą, kuri stabiliai generuoja užklausas renginiams per Meta ir Google reklamas."
 category: "HoReCa"
 date: "2025-06-15"
 tags:
-  - wordpress
+  - landing-page
+  - meta-ads
   - google-ads
-  - seo
 ---
 
 ## Iššūkis
 
-Projektas — barmenų nuomos paslaugų teikėjas, kuris neturėjo profesionalios skaitmeninės prezentacijos. Klientai buvo randami tik per pažintis ir rekomendacijas, o konkurentai jau aktyviai naudojo skaitmeninę reklamą.
+Mobilaus baro ir barmenų paslaugų teikėjas renginiams turėjo **nestabilų užklausų srautą** — klientai ateidavo tik per rekomendacijas. Svetainė neturėjo aiškaus pozicionavimo pagal konkrečius renginius, o reklamos buvo tik bendro pobūdžio „palikite užklausą".
 
 ## Sprendimas
 
-Sukūrėme visapusišką skaitmeninę strategiją:
-
-- **WordPress svetainė** — modernus, greitas ir konversijoms optimizuotas dizainas su online užklausos forma
-- **Google Ads kampanijos** — tikslinės reklamos su lokaliniu targetavimu Vilniaus ir Kauno regionuose
-- **SEO optimizacija** — techninė svetainės optimizacija ir turinio strategija pagal paieškos raktažodžius
+- **Perdarėme lendingą** — fokusuotą į konkrečius ivento tipus: vestuves, korporatyvus, privatias šventes
+- **Pridėjome offerį + vizualinį turinį** (UGC stiliaus video ir nuotraukos iš realių renginių)
+- **Paleidome Meta + Google Ads** kampanijas su tiksliu targetavimu pagal renginių sezoną
+- **Įdiegėme užklausų trackingą** — pilnas konversijų sekimas nuo reklamos iki užklausos
 
 ## Rezultatai
 
-Per pirmus 3 mėnesius nuo paleidimo:
+- **+85%** užklausų nuo paleidimo
+- **Stabilus leadų srautas** sezono metu
+- **Pagerėjusi leadų kokybė** — mažiau netikslinių užklausų
 
-- **Užklausų skaičius** padidėjo 85%
-- **Reklamos ROI** pasiekė 2.4x
-- **Organinis srautas** išaugo 60%
-- **Vidutinis klientų pritraukimo kaštai** sumažėjo 35%
-
-> "Agentūra padėjo mums pagaliau tapti matomiems internete — dabar klientai randa mus patys."
-> — Tomas, BarmenForYou įkūrėjas
+> „Pagaliau turime stabilų užklausų srautą — nebereikia laukti, kol kas nors parekomenduos."
+> — Įkūrėjas, HoReCa sektorius

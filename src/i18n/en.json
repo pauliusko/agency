@@ -51,7 +51,7 @@
           "duration": "3‑MONTH PROGRAM",
           "title": "BUSINESS GROWTH",
           "desc": "Stable acquisition across channels with ongoing optimization.",
-          "bullets": ["Corporate site with UX design", "SEO strategy + content plan", "Google Ads + remarketing", "Meta Ads (Facebook & Instagram)", "Monthly performance reporting", "A/B testing and tuning"],
+          "bullets": ["Business site with UX design", "SEO strategy + content plan", "Google Ads + remarketing", "Meta Ads (Facebook & Instagram)", "Monthly performance reporting", "A/B testing and tuning"],
           "price": "€3900",
           "priceNote": "/ project"
         },
@@ -78,8 +78,8 @@
         {
           "num": "W2",
           "duration": "2–4 WEEKS",
-          "title": "CORPORATE WEBSITE",
-          "desc": "Multi‑page presence: content, UX, and a solid technical base.",
+          "title": "BUSINESS WEBSITE",
+          "desc": "Multi‑page website for your business — content, UX, and a solid technical base.",
           "bullets": ["UX/UI + information architecture", "CMS or static stack — as needed", "Integrations (forms, CRM, analytics)", "Care plan — optional"],
           "price": "from €1000",
           "priceNote": "/ project"
@@ -102,7 +102,9 @@
           "desc": "Search + Display campaigns, optimization, and reporting.",
           "bullets": ["Account/campaign structure", "Keyword research + tuning", "Conversion tracking + analytics", "Monthly performance report", "A/B tests + bid optimization"],
           "price": "from €450",
-          "priceNote": "/ month"
+          "priceNote": "/ month",
+          "trialPrice": "from €350",
+          "trialLabel": "1st month"
         },
         {
           "num": "06",
@@ -111,7 +113,9 @@
           "desc": "Facebook & Instagram campaigns, audiences, and creative direction.",
           "bullets": ["Campaign build + management", "Audience creation + targeting", "Creative guidance", "Retargeting", "Monthly reporting + optimization"],
           "price": "from €400",
-          "priceNote": "/ month"
+          "priceNote": "/ month",
+          "trialPrice": "from €300",
+          "trialLabel": "1st month"
         },
         {
           "num": "07",
@@ -120,7 +124,9 @@
           "desc": "Google + Meta + remarketing — one team, one roadmap.",
           "bullets": ["Google + Meta management", "Cross‑platform remarketing", "Attribution + analytics", "Budget allocation across channels", "Weekly reporting + strategy"],
           "price": "from €800",
-          "priceNote": "/ month"
+          "priceNote": "/ month",
+          "trialPrice": "from €600",
+          "trialLabel": "1st month"
         }
       ],
       "ai": [
@@ -183,7 +189,7 @@
   "cases": {
     "label": "Work",
     "title": "OUR\nWORK",
-    "desc": "Clients and domains we've shipped for. Results that speak plainly.",
+    "desc": "Clients and projects we've worked with. Real results that speak for themselves.",
     "readMore": "Read more →",
     "badge": {
       "website": "Website",
@@ -240,7 +246,7 @@
     "items": [
       {
         "q": "How much is a website — and how long does it take?",
-        "a": "Standalone web engagements (Websites tab): landing from €500 in 5–7 days; corporate site from €1500 in 2–4 weeks; e‑commerce is scoped individually. Bundles combine site + marketing — see Bundles."
+        "a": "Standalone web engagements (Websites tab): landing from €500 in 5–7 days; business site from €1500 in 2–4 weeks; e‑commerce is scoped individually. Bundles combine site + marketing — see Bundles."
       },
       {
         "q": "Can you work with our existing site?",

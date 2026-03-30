@@ -9,6 +9,8 @@ type Card = {
   bullets: string[];
   price: string;
   priceNote: string;
+  trialPrice?: string;
+  trialLabel?: string;
 };
 
 const cardData = lt.services.cardData;
@@ -64,10 +66,25 @@ const supportPlans = cardData.support;
                   ))}
                 </ul>
                 <div class="service-card__bottom">
-                  <div class="service-card__price-wrap">
-                    <span class="service-card__price">{card.price}</span>
-                    <span class="service-card__price-note">{card.priceNote}</span>
-                  </div>
+                  {card.trialPrice ? (
+                    <div class="service-card__price-wrap service-card__price-wrap--has-trial">
+                      <span class="service-card__trial-badge">{card.trialLabel}</span>
+                      <div class="service-card__trial-row">
+                        <span class="service-card__trial-price">{card.trialPrice}</span>
+                        <span class="service-card__price-note">{card.priceNote}</span>
+                      </div>
+                      <div class="service-card__old-row">
+                        <span class="service-card__regular-label">toliau —</span>
+                        <span class="service-card__price service-card__price--old">{card.price}</span>
+                        <span class="service-card__price-note service-card__price-note--old">{card.priceNote}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div class="service-card__price-wrap">
+                      <span class="service-card__price">{card.price}</span>
+                      <span class="service-card__price-note">{card.priceNote}</span>
+                    </div>
+                  )}
                   <a href="#contact" class="service-card__cta" data-i18n="services.cta">SIŲSTI UŽKLAUSĄ →</a>
                 </div>
               </div>
@@ -102,20 +119,35 @@ const supportPlans = cardData.support;
     document.querySelectorAll<HTMLElement>('[data-svc-cat]').forEach((el) => {
       const cat = el.dataset.svcCat as string;
       const idx = parseInt(el.dataset.svcIdx || '0', 10);
-      const cards = data[cat] as { duration: string; title: string; desc: string; bullets: string[]; price: string; priceNote: string }[];
+      const cards = data[cat] as { duration: string; title: string; desc: string; bullets: string[]; price: string; priceNote: string; trialPrice?: string; trialLabel?: string }[];
       const card = cards?.[idx];
       if (!card) return;
 
       const badge = el.querySelector('.service-card__badge');
       const title = el.querySelector('.service-card__title');
       const desc = el.querySelector('.service-card__desc');
-      const price = el.querySelector('.service-card__price');
-      const note = el.querySelector('.service-card__price-note');
       if (badge) badge.textContent = card.duration;
       if (title) title.textContent = card.title;
       if (desc) desc.textContent = card.desc;
-      if (price) price.textContent = card.price;
-      if (note) note.textContent = card.priceNote;
+
+      // Handle trial pricing
+      const trialBadge = el.querySelector('.service-card__trial-badge');
+      const trialPrice = el.querySelector('.service-card__trial-price');
+      const oldPrice = el.querySelector('.service-card__price--old');
+      const regularLabel = el.querySelector('.service-card__regular-label');
+      const plainPrice = el.querySelector('.service-card__price:not(.service-card__price--old)');
+
+      if (trialBadge && card.trialLabel) trialBadge.textContent = card.trialLabel;
+      if (trialPrice && card.trialPrice) trialPrice.textContent = card.trialPrice;
+      if (oldPrice) oldPrice.textContent = card.price;
+      if (regularLabel) {
+        const lang = document.documentElement.lang || 'lt';
+        regularLabel.textContent = lang === 'en' ? 'then —' : lang === 'ru' ? 'далее —' : 'toliau —';
+      }
+      if (plainPrice && !trialBadge) plainPrice.textContent = card.price;
+
+      const notes = el.querySelectorAll('.service-card__price-note');
+      notes.forEach(n => { if (n) n.textContent = card.priceNote; });
 
       const lis = el.querySelectorAll('.service-card__bullets li');
       card.bullets.forEach((b, i) => {
@@ -348,6 +380,74 @@ const supportPlans = cardData.support;
     gap: 2px;
   }
 
+  .service-card__price-wrap--has-trial {
+    gap: 6px;
+  }
+
+  /* ── Trial badge ── */
+  .service-card__trial-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: flex-start;
+  }
+
+  /* ── Trial price row ── */
+  .service-card__trial-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .service-card__trial-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--accent);
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .service-card__trial-row .service-card__price-note {
+    color: var(--accent);
+    opacity: 0.6;
+  }
+
+  /* ── Old price row ── */
+  .service-card__old-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .service-card__regular-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.4;
+    letter-spacing: 0.5px;
+  }
+
+  .service-card__price--old {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: var(--text-muted);
+    opacity: 0.35;
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 80, 80, 0.55);
+    text-decoration-thickness: 2px;
+    line-height: 1;
+  }
+
+  .service-card__price-note--old {
+    opacity: 0.25 !important;
+  }
+
+  /* ── Standard price (non-trial) ── */
   .service-card__price {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(28px, 5vw, 40px);
@@ -387,6 +487,12 @@ const supportPlans = cardData.support;
     }
   }
 
+  @media (max-width: 1024px) {
+    .services__support-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
   @media (max-width: 600px) {
     .services {
       padding: 56px 0;
@@ -401,10 +507,6 @@ const supportPlans = cardData.support;
     .services__tab {
       padding: 12px 16px;
       font-size: 14px;
-    }
-
-    .services__support-grid {
-      grid-template-columns: 1fr;
     }
   }
 

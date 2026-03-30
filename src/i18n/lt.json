@@ -51,7 +51,7 @@
           "duration": "3 MĖN PROGRAMA",
           "title": "VERSLO PLĖTRA",
           "desc": "Stabilus klientų srautas per kelis kanalus su nuolatine optimizacija.",
-          "bullets": ["Korporatyvinė svetainė su UX dizainu", "SEO strategija + turinio planas", "Google Ads + remarketing kampanijos", "Meta Ads (Facebook & Instagram)", "Mėnesinis veiklos reporting", "A/B testavimas ir optimizacija"],
+          "bullets": ["Verslo svetainė su UX dizainu", "SEO strategija + turinio planas", "Google Ads + remarketing kampanijos", "Meta Ads (Facebook & Instagram)", "Mėnesinės veiklos ataskaitos", "A/B testavimas ir optimizacija"],
           "price": "3900€",
           "priceNote": "/ projektas"
         },
@@ -60,7 +60,7 @@
           "duration": "6 MĖN PROGRAMA",
           "title": "PILNAS VALDYMAS",
           "desc": "Pilna skaitmeninė strategija — nuo branding iki pardavimų automatizacijos.",
-          "bullets": ["Išplėsta svetainė su UX/UI dizainu", "Pilnas SEO ciklas (on-page + off-page)", "Google Ads pilnas kampanijų valdymas", "Meta Ads kelios kampanijos + retargeting", "Logotipas ir vizualinis identitetas", "CRM integracija ir lead nurturing", "Savaitinis reporting ir strategijos koregavimas"],
+          "bullets": ["Išplėsta svetainė su UX/UI dizainu", "Pilnas SEO ciklas (on-page + off-page)", "Google Ads pilnas kampanijų valdymas", "Meta Ads kelios kampanijos + retargeting", "Logotipas ir vizualinis identitetas", "CRM integracija ir lead nurturing", "Savaitinės ataskaitos ir strategijos koregavimas"],
           "price": "6900€",
           "priceNote": "/ projektas"
         }
@@ -71,16 +71,16 @@
           "duration": "5–7 D.",
           "title": "LANDING PAGE",
           "desc": "Vieno puslapio svetainė greitam paleidimui ir konversijoms.",
-          "bullets": ["Struktūra, turinys ir vizualinis karkasas", "Mobile-first ir greitis", "Formos ir konversijų taškai", "Bazinis SEO ir analitika"],
+          "bullets": ["Struktūra, turinys ir dizaino maketas", "Mobile-first ir greitis", "Formos ir konversijų taškai", "Bazinis SEO ir analitika"],
           "price": "nuo 500€",
           "priceNote": "/ projektas"
         },
         {
           "num": "W2",
           "duration": "2–4 SAV.",
-          "title": "KORPORATYVINĖ SVETAINĖ",
-          "desc": "Kelionių po brandą: puslapiai, turinys, UX ir techninis pagrindas.",
-          "bullets": ["UX/UI ir informacijos architektūra", "CMS arba statinis stack — pagal poreikį", "Integracijos (formos, CRM, analitika)", "Priežiūros planas — pasirinktinai"],
+          "title": "VERSLO SVETAINĖ",
+          "desc": "Daugiapuslapė svetainė jūsų verslui — turinys, UX ir techninis pagrindas.",
+          "bullets": ["UX/UI ir informacijos architektūra", "CMS arba statinė sistema — pagal poreikį", "Integracijos (formos, CRM, analitika)", "Priežiūros planas — pasirinktinai"],
           "price": "nuo 1000€",
           "priceNote": "/ projektas"
         },
@@ -99,28 +99,34 @@
           "num": "05",
           "duration": "MĖNESINIS",
           "title": "GOOGLE ADS VALDYMAS",
-          "desc": "Google paieškos ir display kampanijų kūrimas, optimizacija ir reportingas.",
-          "bullets": ["Kampanijų struktūros kūrimas", "Raktažodžių tyrimai ir optimizacija", "Konversijų sekimas ir analitika", "Mėnesinis veiklos reportingas", "A/B testavimas ir bid optimizacija"],
+          "desc": "Google paieškos ir display kampanijų kūrimas, optimizacija ir ataskaitos.",
+          "bullets": ["Kampanijų struktūros kūrimas", "Raktažodžių tyrimai ir optimizacija", "Konversijų sekimas ir analitika", "Mėnesinės veiklos ataskaitos", "A/B testavimas ir bid optimizacija"],
           "price": "nuo 450€",
-          "priceNote": "/ mėn"
+          "priceNote": "/ mėn",
+          "trialPrice": "nuo 350€",
+          "trialLabel": "1-as mėnuo"
         },
         {
           "num": "06",
           "duration": "MĖNESINIS",
           "title": "META ADS VALDYMAS",
           "desc": "Facebook ir Instagram kampanijų kūrimas, auditorijų targetavimas ir optimizacija.",
-          "bullets": ["Kampanijų kūrimas ir valdymas", "Auditorijų kūrimas ir targetavimas", "Vizualinio turinio rekomendacijos", "Retargeting kampanijos", "Mėnesinis reporting ir optimizacija"],
+          "bullets": ["Kampanijų kūrimas ir valdymas", "Auditorijų kūrimas ir targetavimas", "Vizualinio turinio rekomendacijos", "Retargeting kampanijos", "Mėnesinės ataskaitos ir optimizacija"],
           "price": "nuo 400€",
-          "priceNote": "/ mėn"
+          "priceNote": "/ mėn",
+          "trialPrice": "nuo 300€",
+          "trialLabel": "1-as mėnuo"
         },
         {
           "num": "07",
           "duration": "MĖNESINIS",
           "title": "PILNAS REKLAMOS VALDYMAS",
           "desc": "Google + Meta + remarketing — visų reklamos kanalų valdymas iš vienos vietos.",
-          "bullets": ["Google Ads + Meta Ads valdymas", "Cross-platform remarketing", "Konversijų atribucija ir analitika", "Biudžeto optimizacija tarp kanalų", "Savaitinis reporting ir strategija"],
+          "bullets": ["Google Ads + Meta Ads valdymas", "Cross-platform remarketing", "Konversijų atribucija ir analitika", "Biudžeto optimizacija tarp kanalų", "Savaitinės ataskaitos ir strategija"],
           "price": "nuo 800€",
-          "priceNote": "/ mėn"
+          "priceNote": "/ mėn",
+          "trialPrice": "nuo 600€",
+          "trialLabel": "1-as mėnuo"
         }
       ],
       "ai": [
@@ -183,7 +189,7 @@
   "cases": {
     "label": "Darbai",
     "title": "MŪSŲ\nDARBAI",
-    "desc": "Klientai ir domenai, su kuriais dirbome. Realūs rezultatai, kurie kalba patys už save.",
+    "desc": "Klientai ir projektai, su kuriais dirbome. Realūs rezultatai, kurie kalba patys už save.",
     "readMore": "Skaityti daugiau →",
     "badge": {
       "website": "Svetainė",
@@ -240,7 +246,7 @@
     "items": [
       {
         "q": "Kiek kainuoja svetainė ir per kiek laiko bus paruošta?",
-        "a": "Atskirai (skiltis „Svetainės“): landing page — nuo 500€, 5–7 d.; korporatyvinė svetainė — nuo 1500€, 2–4 sav.; e-parduotuvė — individualiai pagal apimtį. Rinkiniai derina svetainę ir rinkodarą — žr. „Rinkiniai“."
+        "a": "Atskirai (skiltis „Svetainės“): landing page — nuo 500€, 5–7 d.; verslo svetainė — nuo 1500€, 2–4 sav.; e-parduotuvė — individualiai pagal apimtį. Rinkiniai derina svetainę ir rinkodarą — žr. „Rinkiniai“."
       },
       {
         "q": "Ar galite dirbti su jau egzistuojančia svetaine?",

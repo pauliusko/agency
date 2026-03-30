@@ -1,44 +1,43 @@
 ---
-title: "oryzalab.com — kosmetikos prekės ženklo augimas"
+title: "oryzalab.com — premium kosmetikos brando augimas"
 client: "oryzalab.com"
 duration: "5 mėn"
 services:
   - Meta Ads
-  - Google Ads
-  - UX
+  - UGC
+  - Performance
 metrics:
   - { value: "+145%", label: "Srauto" }
   - { value: "3.5x", label: "ROAS" }
-  - { value: "+110%", label: "Pardavimų" }
-description: "Meta ir Google Ads kampanijos bei svetainės tobulinimas konversijoms kosmetikos sektoriuje"
-category: "Kosmetika"
+  - { value: "+120%", label: "Pardavimų" }
+description: "Dirbome su premium brand'u, kur negalima agresyvi reklama — išlaikėme balansą tarp branding ir performance."
+category: "Premium Skincare"
 date: "2025-08-20"
 tags:
   - meta-ads
-  - google-ads
-  - ux
+  - ugc
+  - performance
 ---
 
 ## Iššūkis
 
-Prekės ženklas — natūralios kosmetikos prekės ženklas, kuris norėjo padidinti online pardavimus ir išplėsti klientų bazę. Svetainė nebuvo optimizuota konversijoms, o reklamos kampanijos nebuvo sistemingai valdomos.
+Premium skincare brendas iš Prancūzijos. Pagrindinės problemos:
+- **Nėra pardavimų** — net prie ~5k€/mėn reklamos biudžeto
+- **Žemas CTR** — kreativai nesulaikė dėmesio
+- **Silpnas offeris** — nebuvo priežasties pirkti čia ir dabar
 
 ## Sprendimas
 
-Įgyvendinome visapusišką skaitmeninės rinkodaros strategiją:
-
-- **Meta Ads kampanijos** — vizualiai patrauklios reklamos su produktų demonstracijomis ir klientų atsiliepimais
-- **Google Ads** — paieškos ir Shopping kampanijos, targetuojant natūralios kosmetikos pirkėjus
-- **UX optimizacija** — svetainės tobulinimas: greičio didinimas, checkout supaprastinimas, mobilios versijos pagerinimas
+- **Pasiūlėme offerių strategiją** — bundles, dovanos, limitinės akcijos
+- **Įdiegėme UGC + demo kreativus** — realūs naudojimo vaizdeliai
+- **Susikoncentravome į vieną hero produktą** — vienas stiprus produktas vietoj 50 silpnų
+- **Optimizavome kampanijų struktūrą** — mažiau kampanijų, daugiau biudžeto kiekvienai
 
 ## Rezultatai
 
-Per 5 mėnesius:
+- **+145%** srauto
+- **3.5x ROAS**
+- **+120%** pardavimų nuo optimizacijos pradžios
 
-- **Svetainės srautas** padidėjo 145%
-- **ROAS** pasiekė 3.5x
-- **Online pardavimai** išaugo 110%
-- **Krepšelio paleidimo rodiklis** sumažėjo 30%
-
-> "Mūsų e-parduotuvė tapo tikru pardavimų kanalu, ne tik vizitine kortele."
-> — OryzaLab įkūrėja
+> „Supratome, kad premium brande galima efektyviai reklamuoti — tereikia tinkamo balando tarp image ir performance."
+> — Įkūrėja, kosmetikos sektorius

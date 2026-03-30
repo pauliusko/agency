@@ -1,44 +1,43 @@
 ---
-title: "inner.lt — sveikatos sektoriaus skaitmeninė rinkodara"
+title: "inner.lt — wellness produktų reklamos optimizavimas"
 client: "inner.lt"
 duration: "4 mėn"
 services:
   - Meta Ads
-  - Targeting
-  - Konversijos
+  - UGC
+  - Retargeting
 metrics:
   - { value: "+67%", label: "Reach" }
   - { value: "2.2x", label: "ROI" }
-  - { value: "+80%", label: "Registracijų" }
-description: "Meta Ads kampanijos su tikslia auditorija ir konversijų optimizavimu sveikatos sektoriuje"
-category: "Sveikata"
+  - { value: "-30%", label: "CPA" }
+description: "Pagerinome kūrybą ir pasiūlymus, kas leido sumažinti kainą už konversiją."
+category: "Wellness"
 date: "2025-05-10"
 tags:
   - meta-ads
-  - targeting
-  - konversijos
+  - ugc
+  - retargeting
 ---
 
 ## Iššūkis
 
-Inner.lt — sveikatos ir savijautos platforma, norėjusi padidinti auditorijos pasiekiamumą ir pritraukti daugiau registracijų. Ankstesnės bandymas reklamuotis nedavė norimų rezultatų dėl neaiškaus auditorijos segmentavimo.
+Inner.lt — wellness produktai ir narystės programa. Pagrindinės problemos:
+- **Brangios konversijos** — kaina už klientą buvo per aukšta
+- **Silpni kreativai** — standartinės produktų nuotraukos neveikė
+- **Neaiškus offeris** — nebuvo aišku, kodėl pirkti dabar
 
 ## Sprendimas
 
-Sukūrėme tikslinę Meta Ads strategiją:
-
-- **Auditorijos segmentavimas** — detalus targetavimas pagal interesus, amžių ir elgseną, orientuotas į sveikatos ir savijautos entuziastus
-- **A/B testavimas** — nuolatinis skelbimų kūrybinio turinio ir formatų testavimas optimaliam efektyvumui
-- **Konversijų optimizavimas** — landing puslapio optimizacija ir retargeting kampanijos
+- **Įdiegėme UGC kreativus** — realių žmonių turinys vietoj studijinių nuotraukų
+- **Pridėjome offer-based požiūrį** — konkreti kaina + vertė kiekviename skelbime
+- **Testėme skirtingus formatus** — video vs static, stories vs feed
+- **Optimizavome retargetingą** — šilto srauto kampanijos su kitokiu pranešimu
 
 ## Rezultatai
 
-Per 4 mėnesius:
+- **+67%** reach — platesnė auditorija mažesniu biudžetu
+- **2.2x ROI**
+- **-30% CPA** — sumažėjo kaina už konversiją
 
-- **Skelbimų pasiekiamumas** padidėjo 67%
-- **Reklamos ROI** pasiekė 2.2x
-- **Naujų registracijų** skaičius išaugo 80%
-- **Kaina už registraciją** sumažėjo 45%
-
-> "Pagaliau radome agentūrą, kuri supranta mūsų auditoriją ir moka su ja kalbėti."
-> — Inner.lt komanda
+> „Kūryba ir aiškūs pasiūlymai pakeitė viską — konversijų kaina nukrito, o kokybė išliko."
+> — Vadovė, wellness sektorius

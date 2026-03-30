@@ -1,44 +1,43 @@
 ---
-title: "weardzen.com — mados prekės ženklo redizainas"
+title: "weardzen.com — fashion e-commerce funnel optimizavimas"
 client: "weardzen.com"
 duration: "4 mėn"
 services:
-  - Web Design
+  - UX
   - Google Ads
   - Meta Ads
 metrics:
   - { value: "+110%", label: "Konversijų" }
   - { value: "2.9x", label: "ROI" }
   - { value: "+85%", label: "Srauto" }
-description: "Svetainės redizainas ir reklamos kampanijų paleidimas nuo nulio mados sektoriuje"
-category: "Mada"
+description: "Pagerinome visą funnel — nuo reklamos iki svetainės, kas padvigubino konversijas."
+category: "Fashion"
 date: "2025-04-15"
 tags:
-  - web-design
+  - ux
   - google-ads
   - meta-ads
 ---
 
 ## Iššūkis
 
-Prekės ženklas — mados ir aksesuarų prekės ženklas, kurio svetainė buvo pasenusi ir neatspindėjo premium prekės ženklo identiteto. Pardavimai online buvo minimalūs, o konkurentai dominavo skaitmeninėje erdvėje.
+E-commerce drabužių brendas su pagrindinėmis problemomis:
+- **Žema svetainės konversija** — žmonės ateidavo, bet nepirkdavo
+- **Silpna ads → landing sąsaja** — reklama vedė į bendrus puslapius
+- **Neefektyvios kampanijos** — biudžetas išdalintas per daug kampanijų
 
 ## Sprendimas
 
-Atlikome pilną skaitmeninę transformaciją:
-
-- **Svetainės redizainas** — visiškai nauja UX/UI, atspindinti premium mados prekės ženklo estetiką, su greitu krovimu ir patogia navigacija
-- **Google Ads kampanijos** — paieškos ir Shopping reklamos, orientuotos į stilingus pirkėjus
-- **Meta Ads** — Instagram ir Facebook kampanijos su lifestyle turinio strategija
+- **Pagerinome svetainės UX** — greičio optimizacija, aiškesnė navigacija, paprastesnis checkout
+- **Perdirbome lendingus** — kiekviena reklama vedė į specifinį, optimizuotą puslapį
+- **Sukonfigūravome Google + Meta** kampanijas — su aiškia funnelių logika
+- **Optimizavome visą funnelą** — nuo pirmo kliko iki pirkimo
 
 ## Rezultatai
 
-Per 4 mėnesius nuo paleidimo:
+- **+110%** konversijų
+- **2.9x ROI**
+- **+85%** srauto iš mokamų kanalų
 
-- **Konversijų rodiklis** padidėjo 110%
-- **Reklamos ROI** pasiekė 2.9x
-- **Svetainės srautas** išaugo 85%
-- **Vidutinė užsakymo vertė** padidėjo 20%
-
-> "Nauja svetainė ir reklama pakeitė viską — dabar esame ten, kur turėtume būti."
-> — WeardZen vadovė
+> „Svetainė ir reklama pagaliau dirba kartu — konversijos padvigubėjo."
+> — E-commerce vadovas, mados sektorius

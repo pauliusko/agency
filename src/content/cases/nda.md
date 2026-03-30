@@ -1,43 +1,44 @@
 ---
-title: "Konfidencinis CRM ir procesų automatizacijos projektas"
+title: "NDA — AI procesų automatizacija"
 client: "NDA"
-duration: "3 mėn"
+duration: "2 mėn"
 services:
-  - CRM
+  - AI
   - Automatizacija
-  - UX/UI
+  - Make
 metrics:
   - { value: "+200%", label: "Efektyvumas" }
-  - { value: "40%", label: "Laiko taupymas" }
+  - { value: "-40%", label: "Laiko" }
   - { value: "+75%", label: "Procesų kontrolė" }
-description: "Individuali CRM sistema ir procesų automatizavimas pagal konfidencialią sutartį — be atskleidžiamo kliento ar sektoriaus."
+description: "Automatizavome procesus su AI, sumažinome rankinį darbą ir padidinome efektyvumą."
 category: "Konfidencialu"
 date: "2025-10-05"
 tags:
-  - crm
+  - ai
   - automatizacija
-  - ux-ui
+  - make
 ---
 
 ## Kontekstas
 
-Projektas vykdytas pagal **konfidencialią sutartį (NDA)**: viešai neatskleidžiame kliento pavadinimo, nišos detalių ar vizualių identifikatorių. Tai standartinė praktika su tarptautiniais ir jautrių duomenų projektais.
+Projektas vykdytas pagal **konfidencialią sutartį (NDA)**: viešai neatskleidžiame kliento pavadinimo, nišos detalių ar vizualių identifikatorių.
 
 ## Iššūkis
 
-Verslas valdė klientų srautą ir sandorius paskirstytose lentelėse ir rankiniuose žingsniuose. Augant apimčiai, tai generavo dubliavimą, prarastą kontekstą ir lėtesnį atsaką klientams.
+- **Daug rankinio darbo** — pasikartojantys procesai užimdavo per daug laiko
+- **Neefektyvūs procesai** — informacija dubliuojasi, sprendimai lėti
 
 ## Sprendimas
 
-- **CRM** — pritaikyta prekybos ir aptarnavimo logikai, su istorija ir priminimais
-- **Automatizacija** — pranešimai, sekos ir ataskaitų fragmentai sumažino rankinį darbą
-- **UX/UI** — sąsaja kasdieniam naudojimui, mažinant „spausdinimo“ klaidų riziką
+- **Įdiegėme AI automatizaciją** — Make / n8n pagrindu
+- **Automatizavome workflow** — nuo duomenų surinkimo iki pranešimų ir ataskaitų
+- **Sumažinome rankinį darbą** — procesai veikia be žmogaus įsikišimo
 
 ## Rezultatai
 
-- **+200%** operacinis efektyvumas pagal sutartus KPI
-- **~40%** mažiau laiko pasikartojančiai administracijai
-- **Geriau kontroliuojamas** kliento gyvavimo ciklas
+- **+200%** operacinis efektyvumas
+- **-40%** laiko — mažiau rankinio darbo
+- **Geresnė procesų kontrolė** — viskas matuojama ir prognozuojama
 
-
-> Anoniminė citata: „Sistema tapo centrine darbo vieta — procesai pagaliau matuojami ir nuspėjami.“
+> „Sistema tapo centrine darbo vieta — procesai pagaliau matuojami ir nuspėjami."
+> — Projekto vadovas
