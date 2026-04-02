@@ -5,13 +5,13 @@
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --bg:         #0a0a0a;
-  --bg2:        #111111;
-  --bg3:        #1a1a1a;
-  --text:       #f0ede4;
-  --text-muted: #888888;
+  --bg:         #1e1e1e;
+  --bg2:        #282828;
+  --bg3:        #333333;
+  --text:       #ffffff;
+  --text-muted: #bbbbbb;
   --accent:     #c8f73a;
-  --border:     #1f1f1f;
+  --border:     #444444;
   --radius:     16px;
 }
 
