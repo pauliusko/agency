@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://youragency.lt/sitemap-index.xml
+Sitemap: https://www.gronk.agency/sitemap-0.xml

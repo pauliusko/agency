@@ -5,14 +5,14 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request }) => {
   try {
     const body = await request.json();
-    const { name, company, service, message } = body;
+    const { name, company, email, phone, service, message } = body;
 
     const apiKey = import.meta.env.RESEND_API_KEY;
-    const contactEmail = import.meta.env.CONTACT_EMAIL || 'info@agency.lt';
+    const contactEmail = import.meta.env.CONTACT_EMAIL || 'hello@gronk.agency';
 
     if (!apiKey) {
       // Fallback: log to console if no API key
-      console.log('Contact form submission:', { name, company, service, message });
+      console.log('Contact form submission:', { name, company, email, phone, service, message });
       return new Response(JSON.stringify({ ok: true, fallback: true }), { status: 200 });
     }
 
@@ -20,13 +20,15 @@ export const POST: APIRoute = async ({ request }) => {
     const resend = new Resend(apiKey);
 
     await resend.emails.send({
-      from: 'Agency <noreply@youragency.lt>',
+      from: 'GRØNK <noreply@gronk.agency>',
       to: contactEmail,
       subject: `Nauja užklausa: ${service}`,
       html: `
         <h2>Nauja užklausa</h2>
         <p><strong>Vardas:</strong> ${name}</p>
         <p><strong>Įmonė:</strong> ${company || '—'}</p>
+        <p><strong>El. paštas:</strong> ${email || '—'}</p>
+        <p><strong>Telefonas:</strong> ${phone || '—'}</p>
         <p><strong>Paslauga:</strong> ${service}</p>
         <p><strong>Žinutė:</strong></p>
         <p>${message}</p>

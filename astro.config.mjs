@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://youragency.lt',
+  site: 'https://www.gronk.agency',
   adapter: vercel(),
   integrations: [sitemap()],
 });

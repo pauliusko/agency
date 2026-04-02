@@ -33,6 +33,6 @@ Moderni verslo svetainė turėtų:
 
 ## Kiek kainuoja?
 
-Profesionali svetainė prasideda nuo **2 450€** — tai investicija, kuri atsiperka per kelis mėnesius.
+Profesionali svetainė prasideda nuo **500€** — tai investicija, kuri atsiperka per kelis mėnesius.
 
 > **Susisiekite su mumis** ir gaukite nemokamą pasiūlymą per 24 valandas.
